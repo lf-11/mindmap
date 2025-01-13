@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindmap Tool</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Mindmap Controls</h2>
+            <div class="controls">
+                <input type="text" id="mindmapTitle" placeholder="Mindmap Title">
+                <button onclick="createMindmap()">Create Mindmap</button>
+                
+                <input type="text" id="rootContent" placeholder="Root Node Content">
+                <button onclick="createRootNode()">Create Root Node</button>
+                
+                <input type="text" id="nodeContent" placeholder="Node Content">
+                <button onclick="addChildNode()">Add Child Node</button>
+                
+                <div id="currentMindmap"></div>
+                <button onclick="buildExampleMindmap()" type="button">Build Example Mindmap</button>
+                <button onclick="buildProjectMindmap()">Build Project Mindmap</button>
+            </div>
+        </div>
+        <div id="mindmap" class="mindmap-container"></div>
+    </div>
+    <script src="/static/js/mindmap.js"></script>
+    <script src="/static/js/mindmap_builder.js"></script>
+</body>
+</html>

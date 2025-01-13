@@ -1,0 +1,5 @@
+mindmap-tool/
+└── src/
+    └── database/
+        ├── __init__.py
+        └── database.py 
