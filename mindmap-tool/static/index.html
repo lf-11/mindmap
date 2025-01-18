@@ -13,22 +13,27 @@
             <h2>Mindmap Controls</h2>
             <div class="controls">
                 <input type="text" id="mindmapTitle" placeholder="Mindmap Title">
-                <button onclick="createMindmap()">Create Mindmap</button>
+                <button onclick="createMindmap(document.getElementById('mindmapTitle').value)">Create Mindmap</button>
                 
                 <input type="text" id="rootContent" placeholder="Root Node Content">
-                <button onclick="createRootNode()">Create Root Node</button>
+                <button onclick="createRootNode(document.getElementById('rootContent').value)">Create Root Node</button>
                 
                 <input type="text" id="nodeContent" placeholder="Node Content">
-                <button onclick="addChildNode()">Add Child Node</button>
+                <button onclick="addChildNode(document.getElementById('nodeContent').value)">Add Child Node</button>
                 
-                <div id="currentMindmap"></div>
-                <button onclick="buildExampleMindmap()" type="button">Build Example Mindmap</button>
-                <button onclick="buildProjectMindmap()">Build Project Mindmap</button>
+                <div class="structure-selector">
+                    <select id="structureSelect">
+                        <option value="">Select a structure...</option>
+                    </select>
+                    <button onclick="buildSelectedStructure()">Build Structure</button>
+                </div>
+                
+                <div id="currentMindmap">Current Mindmap: None</div>
+                <div id="selectedNode">Selected Node: None</div>
             </div>
         </div>
         <div id="mindmap" class="mindmap-container"></div>
     </div>
-    <script src="/static/js/mindmap.js"></script>
-    <script src="/static/js/mindmap_builder.js"></script>
+    <script type="module" src="/static/js/mindmap.js"></script>
 </body>
 </html>

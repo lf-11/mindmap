@@ -6,6 +6,7 @@ from .database.database import get_db, Base, engine
 from .mindmap import operations, models
 from pydantic import BaseModel
 from datetime import datetime
+from fastapi.responses import FileResponse
 
 app = FastAPI()
 
@@ -184,4 +185,8 @@ def get_mindmap_structure(
     db: Session = Depends(get_db)
 ):
     return operations.get_structure(db, mindmap_id, start_node_id)
+
+@app.get("/")
+async def read_root():
+    return FileResponse('static/index.html')
 
