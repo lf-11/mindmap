@@ -11,6 +11,16 @@ import { generateOrthogonalPath } from '../layout/PathGenerator.js';
 export function createNodeGroup(nodeData, handleNodeClick) {
     const g = mindMapState.getGroup();
     
+    // Calculate text width for proper rectangle sizing
+    const tempText = g.append('text')
+        .attr('visibility', 'hidden')
+        .text(nodeData.label);
+    const textWidth = tempText.node().getBBox().width;
+    tempText.remove();
+    
+    // Use the larger of minimum width or text width plus padding
+    const nodeWidth = Math.max(config.NODE_WIDTH, textWidth + 40);
+    
     const nodeGroup = g.append('g')
         .attr('class', 'node')
         .attr('data-id', nodeData.id)
@@ -18,16 +28,20 @@ export function createNodeGroup(nodeData, handleNodeClick) {
         .on('click', handleNodeClick)
         .datum(nodeData);
 
+    // Add rectangle with rounded corners
     nodeGroup.append('rect')
-        .attr('x', -config.NODE_WIDTH/2)
+        .attr('x', -nodeWidth/2)
         .attr('y', -config.NODE_HEIGHT/2)
-        .attr('width', config.NODE_WIDTH)
+        .attr('width', nodeWidth)
         .attr('height', config.NODE_HEIGHT)
-        .attr('rx', 5);
+        .attr('rx', 5)
+        .attr('ry', 5);
 
+    // Add text centered in node
     nodeGroup.append('text')
         .attr('text-anchor', 'middle')
-        .attr('dy', '0.3em')
+        .attr('dominant-baseline', 'middle')
+        .attr('dy', '0.1em')
         .text(nodeData.label);
 
     return nodeGroup;

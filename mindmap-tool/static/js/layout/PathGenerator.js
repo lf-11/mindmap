@@ -5,21 +5,28 @@
  * @returns {Object} Path data with SVG path string and total length
  */
 export function generateOrthogonalPath(source, target) {
-    const midY = (source.y + target.y) / 2;
+    // Check if nodes are vertically aligned (within a small threshold)
+    const alignmentThreshold = 5;  // pixels
+    const isVerticallyAligned = Math.abs(source.x - target.x) < alignmentThreshold;
     
-    // Calculate path segments
+    if (isVerticallyAligned) {
+        // Generate straight vertical path
+        const path = `M ${source.x} ${source.y} V ${target.y}`;
+        const length = Math.abs(target.y - source.y);
+        return { path, length };
+    }
+    
+    // Otherwise, generate standard orthogonal path
+    const midY = (source.y + target.y) / 2;
     const verticalLength1 = Math.abs(midY - source.y);
     const horizontalLength = Math.abs(target.x - source.x);
     const verticalLength2 = Math.abs(target.y - midY);
     
-    // Create the path
     const path = `M ${source.x} ${source.y}
                   V ${midY}
                   H ${target.x}
                   V ${target.y}`;
     
-    // Calculate total length
     const length = verticalLength1 + horizontalLength + verticalLength2;
-    
     return { path, length };
 } 

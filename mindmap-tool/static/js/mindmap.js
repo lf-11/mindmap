@@ -9,6 +9,7 @@ import { createMindmap, createRootNode, addChildNode, loadMindmapStructure } fro
 import { handleNodeClick, clearSelection, handleResize } from './utils/EventHandlers.js';
 import { getAvailableStructures } from './examples/structures.js';
 import { buildStructure } from './examples/MindmapBuilder.js';
+import { initColorCustomization } from './customization/ColorManager.js';
 
 // Initialize the network when the page loads
 function initNetwork() {
@@ -26,6 +27,61 @@ function initNetwork() {
     // Set initial transform
     const initialTransform = d3.zoomIdentity.translate(mindMapState.getDimensions().width/2, 60).scale(1);
     mindMapState.setCurrentTransform(initialTransform);
+
+    // Add grid pattern definition
+    const defs = svg.append('defs');
+
+    // Get viewport dimensions
+    const viewportWidth = mindMapState.getDimensions().width;
+    const viewportHeight = mindMapState.getDimensions().height;
+
+    // Create pattern
+    const pattern = defs.append('pattern')
+        .attr('id', 'grid-pattern')
+        .attr('width', 30)        // Larger spacing between dots
+        .attr('height', 30)
+        .attr('patternUnits', 'userSpaceOnUse');
+
+    // Add background
+    pattern.append('rect')
+        .attr('width', 30)
+        .attr('height', 30)
+        .attr('fill', '#0A0A0A');
+
+    // Create a single dot in the pattern
+    pattern.append('circle')
+        .attr('cx', 2)
+        .attr('cy', 2)
+        .attr('r', 0.8)
+        .attr('fill', 'rgba(255, 255, 255, 0.08)');  // Very subtle dots
+
+    // Add background rect with pattern
+    const backgroundRect = svg.append('rect')
+        .attr('width', '100%')
+        .attr('height', '100%')
+        .attr('fill', 'url(#grid-pattern)');
+
+    // Add subtle vignette effect
+    const gradientId = 'radial-fade';
+    const gradient = defs.append('radialGradient')
+        .attr('id', gradientId)
+        .attr('cx', '50%')
+        .attr('cy', '50%')
+        .attr('r', '85%');
+
+    gradient.append('stop')
+        .attr('offset', '0%')
+        .attr('style', 'stop-color: #0A0A0A; stop-opacity: 0.1');
+
+    gradient.append('stop')
+        .attr('offset', '100%')
+        .attr('style', 'stop-color: #0A0A0A; stop-opacity: 0.3');
+
+    // Add gradient overlay
+    svg.append('rect')
+        .attr('width', '100%')
+        .attr('height', '100%')
+        .attr('fill', `url(#${gradientId})`);
 
     const g = svg.append('g')
         .attr('transform', mindMapState.getCurrentTransform());
@@ -78,6 +134,7 @@ function initStructureSelector() {
 document.addEventListener('DOMContentLoaded', () => {
     initNetwork();
     initStructureSelector();
+    initColorCustomization();
 });
 
 // Export functions that need to be accessible from HTML

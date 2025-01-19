@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindmap Tool</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" href="data:,">
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
@@ -30,6 +31,39 @@
                 
                 <div id="currentMindmap">Current Mindmap: None</div>
                 <div id="selectedNode">Selected Node: None</div>
+            </div>
+
+            <!-- Add the color customization section -->
+            <div class="color-customization">
+                <h3>Customize Colors</h3>
+                
+                <div class="color-picker-group">
+                    <label>Background Color:
+                        <input type="color" id="bgColor" value="#0A0A0A">
+                    </label>
+                    
+                    <label>Grid Dot Color:
+                        <input type="color" id="dotColor" value="#FFFFFF">
+                    </label>
+                    <input type="range" id="dotOpacity" min="0" max="100" value="15">
+                    
+                    <label>Connection Path Color:
+                        <input type="color" id="pathColor" value="#CCCCCC">
+                    </label>
+                    <input type="range" id="pathOpacity" min="0" max="100" value="15">
+                    
+                    <label>Node Fill Color:
+                        <input type="color" id="nodeFillColor" value="#2C2C2C">
+                    </label>
+                    
+                    <label>Node Border Color:
+                        <input type="color" id="nodeBorderColor" value="#3C3C3C">
+                    </label>
+                    
+                    <label>Text Color:
+                        <input type="color" id="textColor" value="#FFFFFF">
+                    </label>
+                </div>
             </div>
         </div>
         <div id="mindmap" class="mindmap-container"></div>
