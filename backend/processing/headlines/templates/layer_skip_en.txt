@@ -1,0 +1,46 @@
+You are an expert in document structure analysis. I am analyzing an English document and have a problem with headline hierarchy detection.
+
+The structure of headline layers in this document is as follows:
+{% for layer_num in layer_range -%}
+{% set layer_info = all_layers[layer_num] -%}
+{% if layer_num == 1 -%}
+The first headline layer is {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% elif layer_num == 2 -%}
+The second layer is {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% elif layer_num == 3 -%}
+The third layer is {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% elif layer_num == 4 -%}
+The fourth layer is {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% elif layer_num == 5 -%}
+The fifth layer is {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% endif -%}
+{% endfor %}
+
+The problem is at this section: The previous header is correctly identified as layer {{ previous_layer }} ({{ previous_layer_numerals }}), but then followed by {% if problematic_headers|length == 1 -%}
+a header of layer {{ current_layer }}: {{ problematic_headers[0].text }}
+{%- else -%}
+headers of layer {{ current_layer }}: {{ problematic_headers | map(attribute='text') | join(', ') }}
+{%- endif %}.
+
+{% if expected_layers_info|length > 0 -%}
+{% if expected_layers_info|length == 1 -%}
+{% set expected = expected_layers_info[0] -%}
+Expected would be layer {{ expected.layer_num }} ({{ expected.layer_name }}: {{ expected.layer_numerals }}).
+{% else -%}
+Expected would be layers {% for exp in expected_layers_info -%}
+{{ exp.layer_num }} ({{ exp.layer_name }}: {{ exp.layer_numerals }})
+{%- if not loop.last %} and {% endif -%}
+{%- endfor %}.
+{% endif -%}
+{% endif %}
+
+The relevant text section spans from line {{ section_text.start_line }} to line {{ section_text.end_line }}.
+Start headline: '{{ section_text.start_headline }}'
+End headline: '{{ section_text.end_headline }}'
+
+Please analyze this case and provide a recommendation on how the hierarchy should be correctly assigned. Consider:
+1. The established structure of headline layers
+2. The context of surrounding headlines  
+3. The logical structure of the document
+
+Respond with a clear recommendation and reasoning. 

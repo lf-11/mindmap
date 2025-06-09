@@ -1,48 +1,8 @@
+import { structureDefinitions } from './structureDefinitions.js';
+
 // Simple format to define structures
 // Use indentation to indicate hierarchy
 // Each line format: "name: content"
-const structureDefinitions = {
-    "Example Mindmap": `
-root: Root Topic
-    b1: Branch 1
-        l1.1: Layer 1.1
-            l2.1: Layer 2.1
-                l3.1: Layer 3.1
-                l3.2: Layer 3.2
-                l3.3: Layer 3.3
-            l2.2: Layer 2.2
-                l3.4: Layer 3.4
-                l3.5: Layer 3.5
-    b2: Branch 2
-        l1.2: Layer 1.2
-            l2.3: Layer 2.3
-                l3.6: Layer 3.6
-                l3.7: Layer 3.7`,
-
-    "Project Planning": `
-root: Project Management
-    req: Requirements
-        us: User Stories
-        ts: Technical Specs
-        dg: Design Guidelines
-    time: Timeline
-        p1: Phase 1
-        p2: Phase 2
-        p3: Phase 3
-    res: Resources
-        tm: Team Members
-        bg: Budget
-        tl: Tools`,
-
-    "Simple Test": `
-root: Test Root
-    a: Node A
-        a1: Node A1
-        a2: Node A2
-    b: Node B
-        b1: Node B1
-        b2: Node B2`
-};
 
 // Convert the simple text format to the required structure
 function parseStructure(text) {
@@ -78,11 +38,68 @@ function parseStructure(text) {
     return structure;
 }
 
-export function getAvailableStructures() {
-    return Object.keys(structureDefinitions);
+function parseTextStructure(text) {
+    return parseStructure(text);
 }
 
-export function getStructure(name) {
+function parseJsonStructure(json) {
+    console.log("Starting parseJsonStructure with:", json);
+    
+    const rootNode = {
+        content: "Table of Contents",
+        key: "root",
+        children: []
+    };
+
+    if (json.table_of_contents && Array.isArray(json.table_of_contents)) {
+        console.log("Found table_of_contents array with length:", json.table_of_contents.length);
+        rootNode.children = json.table_of_contents.map(node => {
+            const converted = convertNode(node);
+            console.log("Converted node:", converted);
+            return converted;
+        });
+    } else {
+        console.warn("No table_of_contents array found in JSON:", json);
+    }
+
+    console.log("Final rootNode structure:", rootNode);
+    return rootNode;
+
+    function convertNode(node) {
+        console.log("Converting node:", node);
+        const converted = {
+            content: node.title,
+            key: node.title.toLowerCase().replace(/[^a-z0-9]/g, '_'),
+            page: node.page,
+            children: (node.children || []).map(child => {
+                console.log("Converting child node:", child);
+                return convertNode(child);
+            })
+        };
+        return converted;
+    }
+}
+
+export function getAvailableStructures() {
+    return [...Object.keys(structureDefinitions), "JSON"];
+}
+
+export async function getStructure(name) {
+    if (name === "JSON") {
+        try {
+            console.log("Fetching JSON structure");
+            const response = await fetch('/static/js/examples/tableOfContents.json');
+            const jsonData = await response.json();
+            console.log("Fetched JSON data:", jsonData);
+            const structure = parseJsonStructure(jsonData);
+            console.log("Parsed structure:", structure);
+            return structure;
+        } catch (error) {
+            console.error("Error loading JSON structure:", error);
+            throw new Error('Failed to load JSON structure: ' + error.message);
+        }
+    }
+
     const definition = structureDefinitions[name];
     if (!definition) {
         throw new Error(`Structure "${name}" not found`);

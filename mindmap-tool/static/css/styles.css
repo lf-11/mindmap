@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
-    background-color: #0A0A0A;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -17,10 +17,53 @@ body {
 
 .sidebar {
     width: 300px;
-    background-color: rgba(44, 44, 44, 0.97);
+    background-color: rgba(240, 240, 240, 0.97);
     padding: 20px;
-    border-right: 1px solid rgba(60, 60, 60, 0.5);
+    border-right: 1px solid rgba(200, 200, 200, 0.5);
     backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, width 0.3s ease;
+    position: relative;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+    width: 0;
+    padding: 0;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(240, 240, 240, 0.97);
+    color: #333333;
+    width: 30px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    border-left: none;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+    right: -30px;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.sidebar-content {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-content {
+    opacity: 0;
 }
 
 .controls {
@@ -31,15 +74,15 @@ body {
 
 .controls input {
     padding: 8px;
-    border: 1px solid rgba(60, 60, 60, 0.8);
+    border: 1px solid rgba(200, 200, 200, 0.8);
     border-radius: 6px;
-    background-color: rgba(30, 30, 30, 0.95);
-    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333333;
 }
 
 .controls button {
     padding: 8px 12px;
-    background-color: rgba(30, 136, 229, 0.9);
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 6px;
@@ -48,93 +91,99 @@ body {
 }
 
 .controls button:hover {
-    background-color: rgba(25, 118, 210, 0.95);
+    background-color: #0056b3;
     transform: translateY(-1px);
 }
 
 .mindmap-container {
     flex-grow: 1;
-    background-color: #0A0A0A;
+    background-color: #FFFFFF;
     height: 100%;
     position: relative;
+    transition: margin-left 0.3s ease;
 }
 
 #currentMindmap, #selectedNode {
     margin-top: 10px;
     padding: 10px;
-    background-color: rgba(44, 44, 44, 0.95);
-    border: 1px solid rgba(60, 60, 60, 0.5);
+    background-color: rgba(245, 245, 245, 0.95);
+    border: 1px solid rgba(200, 200, 200, 0.5);
     border-radius: 6px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #333333;
     backdrop-filter: blur(5px);
 }
 
 .node rect {
-    fill: rgba(44, 44, 44, 0.95);
-    stroke: rgba(70, 70, 70, 0.8);
+    fill: #E0E0E0;
+    stroke: #B0B0B0;
     stroke-width: 1px;
-    rx: 0;
-    ry: 0;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    rx: 5;
+    ry: 5;
+    transition: stroke 0.2s ease, filter 0.2s ease, fill 0.2s ease;
 }
 
 .node text {
-    font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+    font-family: 'IBM Plex Mono', 'Fira Code', Consolas, monospace;
     font-size: 13px;
-    fill: rgba(255, 255, 255, 0.9);
+    fill: #000000;
     font-weight: 400;
     letter-spacing: -0.2px;
+    pointer-events: none;
 }
 
 .link {
     fill: none;
-    stroke: rgba(204, 204, 204, 0.15);
-    stroke-width: 2px;
+    stroke: #000000;
+    stroke-width: 1.5px;
+    opacity: 1;
+    pointer-events: none;
 }
 
 .node.selected rect {
-    stroke: #9C27B0;
+    stroke: #00AEEF;
     stroke-width: 2px;
-    filter: drop-shadow(0 0 8px rgba(156, 39, 176, 0.3));
+    box-shadow: 0 0 15px rgba(0, 174, 239, 0.7);
+}
+
+.node.image-node rect {
+    fill: transparent;
+    stroke: #666; /* A slightly darker border to frame the image */
 }
 
 .node:hover rect {
-    stroke: #1E88E5;
-    stroke-width: 2px;
-    cursor: pointer;
-    filter: drop-shadow(0 0 6px rgba(30, 136, 229, 0.3));
+    stroke: #FFFFFF;
 }
 
 /* Structure selector styling */
 .structure-selector select {
     flex-grow: 1;
     padding: 8px;
-    border: 1px solid rgba(60, 60, 60, 0.8);
+    border: 1px solid rgba(200, 200, 200, 0.8);
     border-radius: 6px;
-    background-color: rgba(30, 30, 30, 0.95);
-    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(250, 250, 250, 0.95);
+    color: #333333;
 }
 
 .structure-selector select:focus {
     outline: none;
-    border-color: rgba(30, 136, 229, 0.8);
-    box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.2);
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
 }
 
 /* Add these styles */
 .color-customization {
     margin-top: 20px;
     padding: 15px;
-    background-color: rgba(30, 30, 30, 0.95);
+    background-color: rgba(245, 245, 245, 0.95);
     border-radius: 6px;
-    border: 1px solid rgba(60, 60, 60, 0.5);
+    border: 1px solid rgba(200, 200, 200, 0.5);
 }
 
 .color-customization h3 {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #333333;
 }
 
 .color-picker-group {
@@ -148,14 +197,14 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #333333;
 }
 
 .color-picker-group input[type="color"] {
     width: 50px;
     height: 25px;
     padding: 0;
-    border: 1px solid rgba(60, 60, 60, 0.8);
+    border: 1px solid rgba(200, 200, 200, 0.8);
     border-radius: 4px;
     background: none;
     cursor: pointer;
@@ -165,4 +214,283 @@ body {
     width: 100%;
     margin-top: -8px;
     margin-bottom: 8px;
+}
+
+/* Styling for Vertical Trunks */
+.vertical-trunk {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+    opacity: 1;
+}
+
+/* Node Type Specific Styling */
+
+/* Title Node */
+.node[data-type="title"] rect {
+    fill: #CECECE;
+    stroke: #000000;
+    stroke-width: 0.86px;
+    rx: 5px;
+    ry: 5px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+}
+.node[data-type="title"] text {
+    font-family: 'IBM Plex Mono', Consolas, monospace;
+    font-size: 36px;
+    font-weight: 500;
+    fill: #000000;
+}
+
+/* First-layer Header (header_l1) */
+.node[data-type="header_l1"] rect {
+    fill: #CECECE; /* Light grey background */
+    stroke: #000000;
+    stroke-width: 0.86px;
+    rx: 5px;
+    ry: 5px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+}
+.node[data-type="header_l1"] text {
+    font-family: 'IBM Plex Mono', Consolas, monospace;
+    font-size: 36px;
+    font-weight: 700; /* Bold */
+    fill: #000000;
+}
+
+/* Secondary Header (header_l2) */
+.node[data-type="header_l2"] rect {
+    fill: #E6E6E6; /* Lighter grey background */
+    stroke: #000000;
+    stroke-width: 0.5px;
+    rx: 3px;
+    ry: 3px;
+}
+.node[data-type="header_l2"] text {
+    font-family: 'IBM Plex Mono', Consolas, monospace;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;   /* Medium */
+    fill: #000000;
+}
+
+/* Third Header (header_l3) */
+.node[data-type="header_l3"] rect {
+    fill: #E6E6E6; 
+    stroke: #000000; 
+    stroke-width: 0.5px;
+    rx: 2px;
+    ry: 2px;
+}
+.node[data-type="header_l3"] text {
+    font-family: 'IBM Plex Mono', Consolas, monospace;
+    font-size: 16px;
+    font-weight: 700; /* Medium */
+    fill: #000000;
+}
+
+/* Content Node */
+.node[data-type="content"] rect {
+    /* background: rgba(238.21, 238.21, 238.21, 0.50) -> #EEEEEE with 50% opacity */
+    fill: #EEEEEE;
+    fill-opacity: 0.5;
+    stroke: #000000; /* outline: 1px black solid */
+    stroke-width: 1px;
+    rx: 5px;
+    ry: 5px;
+}
+
+.node[data-type="content"] text {
+    font-family: 'IBM Plex Mono', Consolas, monospace;
+    /* Font size will be set dynamically by TreeLayout.js based on level */
+    /* Default/Base font size for content can be set here if needed, but JS will override */
+    font-size: 20px; /* Base size, JS will adjust based on depth */
+    font-weight: 400; /* Regular weight */
+    fill: #000000;
+    /* line-height for SVG text is controlled by tspan dy attributes in JS (LAYOUT.LINE_HEIGHT_EM) */
+}
+
+/* Zoom controls */
+.zoom-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(245, 245, 245, 0.95);
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.zoom-button {
+    background: rgba(220, 220, 220, 0.8);
+    border: none;
+    color: #333333;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.zoom-button:hover {
+    background: rgba(200, 200, 200, 0.9);
+}
+
+/* Loading state */
+.node.loading rect {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+    50% {
+        filter: drop-shadow(0 2px 4px rgba(0, 123, 255, 0.3));
+    }
+    100% {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+}
+
+/* Error state */
+.node.error rect {
+    stroke: #f44336;
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(2px, 0, 0);
+    }
+}
+
+/* In styles.css, though TreeLayout.js applies inline styles for measurement */
+.temp-text-measure {
+    visibility: hidden;
+    position: absolute;
+    white-space: normal;
+}
+
+/* Navigation Controls */
+.navigation-controls {
+    pointer-events: none;
+    position: fixed;
+    top: 15px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    width: 200px;
+}
+
+.navigation-controls button {
+    pointer-events: all;
+    background-color: rgba(44, 44, 44, 0.9);
+    border: 1px solid rgba(100, 100, 100, 0.8);
+    color: #fff;
+    font-size: 18px;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    font-weight: bold;
+}
+
+.navigation-controls button:hover {
+    background-color: rgba(70, 70, 70, 0.95);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.navigation-controls button:active {
+    transform: scale(0.95);
+}
+
+.nav-status-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#nav-level-display {
+    pointer-events: all;
+    background-color: rgba(44, 44, 44, 0.9);
+    color: #ddd;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+    border: 1px solid rgba(100, 100, 100, 0.8);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    cursor: default;
+    user-select: none;
+    white-space: nowrap;
+}
+
+/* Header Navigation Control Group */
+.sidebar .control-group {
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .control-group:first-child {
+    border-top: none;
+}
+
+.sidebar .control-group label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.sidebar .control-group select {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.sidebar .control-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.sidebar .control-group select:hover {
+    border-color: #666;
 } 

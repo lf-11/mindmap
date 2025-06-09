@@ -1,0 +1,13 @@
+Document Title (top-left)
+  |
+  +- Header 1 
+  |  |--------|    
+  |  |-Text   |-- Sub-Header 1.1 (here is a junction for a horizontal line to this subheader node)
+  |  |        |
+  |  |-Text   |-- Sub-Header 1.2 (here is a junction for a horizontal line to this subheader node)
+  |
+  +- Header 2 
+
+    +- Header 1 
+     |   
+     |-Text

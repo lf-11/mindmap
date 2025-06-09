@@ -2,6 +2,9 @@ import { mindMapState } from '../config/state.js';
 import { createNodeGroup } from '../components/Node.js';
 import { handleNodeClick } from '../utils/EventHandlers.js';
 import { connectWebSocket } from './WebSocket.js';
+import TreeLayout from '../layout/TreeLayout.js';
+import { addNodeWithAnimation } from '../components/Animation.js';
+import * as config from '../config/config.js';
 
 /**
  * Creates a new mindmap
@@ -29,7 +32,6 @@ export async function createMindmap(title) {
 
 /**
  * Creates a root node for the mindmap
- * @param {string} content - Content of the root node
  */
 export async function createRootNode(content) {
     if (!mindMapState.getCurrentMindmapId() || !content) return;
@@ -42,10 +44,9 @@ export async function createRootNode(content) {
     const node = await response.json();
     const rootNode = {
         id: node.id,
-        x: 0,
-        y: 60,
         label: node.content,
-        parent_id: null
+        parent_id: null,
+        isRoot: true
     };
 
     mindMapState.getGroup().selectAll('*').remove();
@@ -54,20 +55,29 @@ export async function createRootNode(content) {
         mindMapState.getGroup().attr('transform', mindMapState.getCurrentTransform());
     }
 
-    createNodeGroup(rootNode, handleNodeClick);
+    // Use the layout system to position the root node
+    const layout = new TreeLayout();
+    const root = layout.buildTree([rootNode]);
+    await layout.calculateLayout(root);
+
+    createNodeGroup({
+        ...rootNode,
+        x: root.x,
+        y: root.y
+    }, handleNodeClick);
+    
     document.getElementById('rootContent').value = '';
 }
 
 /**
  * Adds a child node to the selected node
- * @param {string} content - Content of the child node
  */
-export async function addChildNode(content) {
+export async function addChildNode(parentId, content) {
     if (!mindMapState.getCurrentMindmapId()) {
         alert('Please create a mindmap first');
         return;
     }
-    if (!mindMapState.getSelectedNodeId()) {
+    if (!parentId) {
         alert('Please select a parent node first');
         return;
     }
@@ -76,23 +86,28 @@ export async function addChildNode(content) {
         return;
     }
 
-    await fetch(`/mindmaps/${mindMapState.getCurrentMindmapId()}/nodes`, {
+    const response = await fetch(`/mindmaps/${mindMapState.getCurrentMindmapId()}/nodes`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             content,
-            parent_id: mindMapState.getSelectedNodeId()
+            parent_id: parentId
         })
     });
 
+    const newNode = await response.json();
     document.getElementById('nodeContent').value = '';
+    return {
+        id: newNode.id,
+        label: newNode.content,
+        parent_id: parentId
+    };
 }
 
 /**
  * Loads the structure of an existing mindmap
- * @param {string} mindmapId - ID of the mindmap to load
  */
 export async function loadMindmapStructure(mindmapId) {
     const response = await fetch(`/mindmaps/${mindmapId}/structure`);
@@ -100,21 +115,56 @@ export async function loadMindmapStructure(mindmapId) {
     
     mindMapState.getGroup().selectAll('*').remove();
     
-    function addNodeToVisualization(nodeData, parentData = null) {
-        const node = {
+    // Convert structure to flat array for layout
+    const nodes = [];
+    function flattenStructure(nodeData, parentId = null) {
+        nodes.push({
             id: nodeData.id,
-            x: nodeData.x_pos,
-            y: nodeData.y_pos,
             label: nodeData.content,
-            parent_id: parentData ? parentData.id : null
-        };
-
-        createNodeGroup(node, handleNodeClick);
-
+            parent_id: parentId
+        });
+        
         for (const child of nodeData.children) {
-            addNodeToVisualization(child, node);
+            flattenStructure(child, nodeData.id);
         }
     }
-    
-    addNodeToVisualization(structure);
+    flattenStructure(structure);
+
+    // Calculate layout for all nodes
+    const layout = new TreeLayout();
+    const root = layout.buildTree(nodes);
+    const layoutNodes = await layout.calculateLayout(root);
+
+    // Add nodes sequentially with animation
+    for (const node of layoutNodes) {
+        if (!node.isFake) {
+            const nodeData = {
+                ...nodes.find(n => n.id === node.id),
+                x: node.x,
+                y: node.y,
+                isLeaf: node.isLeaf
+            };
+
+            if (node.parentId) {
+                const parent = layoutNodes.find(n => n.id === node.parentId);
+                const connectToDot = parent.children.some(child => 
+                    child.isFake && child.children.includes(node));
+
+                if (connectToDot) {
+                    const dot = layoutNodes.find(n => 
+                        n.isFake && n.parentId === node.parentId);
+                    nodeData.connectToDot = true;
+                    nodeData.dotX = dot.x;
+                    nodeData.dotY = dot.y;
+                } else {
+                    nodeData.parentX = parent.x;
+                    nodeData.parentY = parent.y;
+                }
+            }
+
+            await addNodeWithAnimation(nodeData, handleNodeClick);
+            await new Promise(resolve => 
+                setTimeout(resolve, config.ANIMATION.TRANSITION_DELAY));
+        }
+    }
 } 

@@ -1,0 +1,105 @@
+[
+  {
+    "id": "doc_title",
+    "label": "PDF Document from examples folder",
+    "parent_id": null,
+    "type": "title"
+  },
+  {
+    "id": "header1",
+    "label": "Chapter 1: Introduction",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content1_1",
+    "label": "This chapter introduces the main concepts discussed in this document. It provides an overview and sets the stage for deeper exploration in subsequent sections.",
+    "parent_id": "header1",
+    "type": "content"
+  },
+  {
+    "id": "content1_2",
+    "label": "This chapter introduces the main concepts discussed in this document. It provides an overview and sets the stage for deeper exploration in subsequent sections.",
+    "parent_id": "header1",
+    "type": "content"
+  },
+  {
+    "id": "subheader1_1",
+    "label": "Section 1.1: Background",
+    "parent_id": "header1",
+    "type": "header_l2" 
+  },
+  {
+    "id": "subcontent1_1_1",
+    "label": "This chapter introduces the main concepts discussed in this document. It provides an overview and sets the stage for deeper exploration in subsequent sections.",
+    "parent_id": "subheader1_1",
+    "type": "content"
+  },
+  {
+    "id": "subcontent1_1_2",
+    "label": "This chapter introduces the main concepts discussed in this document. It provides an overview and sets the stage for deeper exploration in subsequent sections.",
+    "parent_id": "subheader1_1",
+    "type": "content"
+  },
+  {
+    "id": "subsubheader1_1_1",
+    "label": "Section 1.1.1: Background",
+    "parent_id": "subheader1_1",
+    "type": "header_l3" 
+  },
+  {
+    "id": "subsubcontent1_1_1_1",
+    "label": "This chapter introduces the main concepts discussed in this document. It provides an overview and sets the stage for deeper exploration in subsequent sections.",
+    "parent_id": "subsubheader1_1_1",
+    "type": "content"
+  },
+
+  {
+    "id": "subsubheader1_1_2",
+    "label": "Section 1.1.2: Background",
+    "parent_id": "subheader1_1",
+    "type": "header_l3" 
+  },
+  {
+    "id": "subheader1_2",
+    "label": "Section 1.2: Scope",
+    "parent_id": "header1",
+    "type": "header_l2"
+  },
+  {
+    "id": "subheader1_3",
+    "label": "Section 1.3: Scope",
+    "parent_id": "header1",
+    "type": "header_l2"
+  },
+  {
+    "id": "header2",
+    "label": "Chapter 2: Core Concepts",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content2_1",
+    "label": "This chapter introduces the main concepts discussed in this document. It provides an overview and sets the stage for deeper exploration in subsequent sections.",
+    "parent_id": "header2",
+    "type": "content"
+  },
+  {
+    "id": "content2_2",
+    "label": "This chapter introduces the main concepts discussed in this document. It provides an overview and sets the stage for deeper exploration in subsequent sections.",
+    "parent_id": "header2",
+    "type": "content"
+  },
+  {
+    "id": "subheader2_1",
+    "label": "Section 1.1: Background",
+    "parent_id": "header2",
+    "type": "header_l2" 
+  },
+  {
+    "id": "subheader2_2",
+    "label": "Section 1.2: Scope",
+    "parent_id": "header2",
+    "type": "header_l2"
+  }
+]

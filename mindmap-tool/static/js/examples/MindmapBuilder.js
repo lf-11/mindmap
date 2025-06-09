@@ -12,7 +12,7 @@ class MindmapBuilder {
     }
 
     async createStructure(title, structure) {
-        console.log("1. Starting createStructure");
+        console.log("Creating structure with:", { title, structure });
         // Create mindmap
         const mindmapResponse = await fetch('/mindmaps/', {
             method: 'POST',
@@ -34,13 +34,14 @@ class MindmapBuilder {
         connectWebSocket(mindmap.id);
         await new Promise(resolve => setTimeout(resolve, 500));
         
-        // Create root node
-        console.log("6. Creating root node:", structure.content);
+        // Add logging before creating root node
+        console.log("Creating root node with content:", structure.content);
         const rootResponse = await fetch(
             `/mindmaps/${this.currentMindmapId}/root?content=${encodeURIComponent(structure.content)}`,
             { method: 'POST' }
         );
         const rootNode = await rootResponse.json();
+        console.log("Root node created:", rootNode);
         this.nodeMap.set('root', rootNode.id);
 
         // Create root node visualization
@@ -58,18 +59,23 @@ class MindmapBuilder {
         // Wait to ensure root node is stable
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        // Build the tree recursively with delays
+        // Add logging for children
         if (structure.children) {
+            console.log("Found children to add:", structure.children.length);
             for (const child of structure.children) {
+                console.log("Adding child:", child);
                 await this.addChildWithDelay('root', child);
                 await new Promise(resolve => setTimeout(resolve, 500));
             }
+        } else {
+            console.log("No children found in structure");
         }
 
         return this.currentMindmapId;
     }
 
     async addChildWithDelay(parentKey, nodeStructure) {
+        console.log("Adding child with delay:", { parentKey, nodeStructure });
         if (!this.rootNodeCreated) {
             console.error('Root node not yet created');
             return;
@@ -83,48 +89,73 @@ class MindmapBuilder {
 
         await new Promise(resolve => setTimeout(resolve, 500));
 
-        const response = await fetch(`/mindmaps/${this.currentMindmapId}/nodes`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                content: nodeStructure.content,
-                parent_id: parentId
-            })
-        });
-        const newNode = await response.json();
-        
-        const nodeKey = nodeStructure.key || `node_${newNode.id}`;
-        this.nodeMap.set(nodeKey, newNode.id);
+        // Get the content from either content or title property
+        const nodeContent = nodeStructure.content || nodeStructure.title;
+        console.log("Sending request to create node with content:", nodeContent);
 
-        await new Promise(resolve => {
-            const checkNode = setInterval(() => {
-                if (mindMapState.getGroup().select(`g[data-id="${newNode.id}"]`).size() > 0) {
-                    clearInterval(checkNode);
-                    resolve();
-                }
-            }, 100);
-        });
-
-        await new Promise(resolve => setTimeout(resolve, 500));
-
-        if (nodeStructure.children) {
-            for (const child of nodeStructure.children) {
-                await this.addChildWithDelay(nodeKey, child);
-                await new Promise(resolve => setTimeout(resolve, 500));
+        try {
+            const response = await fetch(`/mindmaps/${this.currentMindmapId}/nodes`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    content: nodeContent,
+                    parent_id: parentId
+                })
+            });
+            
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('Failed to create node:', errorText);
+                throw new Error(`Failed to create node: ${response.status} ${errorText}`);
             }
-        }
 
-        return newNode;
+            const newNode = await response.json();
+            console.log("Node created successfully:", newNode);
+            
+            const nodeKey = nodeStructure.key || `node_${newNode.id}`;
+            this.nodeMap.set(nodeKey, newNode.id);
+
+            console.log("Waiting for node to appear in DOM...");
+            await new Promise(resolve => {
+                let attempts = 0;
+                const checkNode = setInterval(() => {
+                    attempts++;
+                    const nodeExists = mindMapState.getGroup().select(`g[data-id="${newNode.id}"]`).size() > 0;
+                    console.log(`Check attempt ${attempts}: Node exists = ${nodeExists}`);
+                    
+                    if (nodeExists || attempts > 50) { // Add maximum attempts
+                        clearInterval(checkNode);
+                        resolve();
+                    }
+                }, 100);
+            });
+
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            if (nodeStructure.children && nodeStructure.children.length > 0) {
+                console.log(`Processing ${nodeStructure.children.length} children for node ${nodeKey}`);
+                for (const child of nodeStructure.children) {
+                    await this.addChildWithDelay(nodeKey, child);
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                }
+            }
+
+            return newNode;
+        } catch (error) {
+            console.error('Error in addChildWithDelay:', error);
+            throw error;
+        }
     }
 }
 
 export async function buildStructure(structureName) {
     try {
-        const structure = getStructure(structureName);
+        const structure = await getStructure(structureName);
         const builder = new MindmapBuilder();
         await builder.createStructure(structureName, structure);
         console.log(`${structureName} built successfully`);
     } catch (error) {
         console.error(`Error building ${structureName}:`, error);
+        throw error;
     }
 } 

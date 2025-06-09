@@ -1,0 +1,932 @@
+[
+  {
+    "id": "doc_title",
+    "label": "Test title",
+    "parent_id": null,
+    "type": "title"
+  },
+  {
+    "id": "header_1",
+    "label": "## **I. Arten von Säumnisentscheidungen**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_2",
+    "label": "Im Falle der Säumnis sind vier verschiedene Konstellationen zu unterscheiden:",
+    "parent_id": "header_1",
+    "type": "content"
+  },
+  {
+    "id": "content_3",
+    "label": "![](._page_0_Figure_4.jpeg)",
+    "parent_id": "header_1",
+    "type": "content"
+  },
+  {
+    "id": "content_4",
+    "label": "In allen vier Konstellationen können **säumnisspezifische**, dh. auf der Säumnis beruhende Entscheidungen zu Lasten des Säumigen getroffen werden. Sie alle setzen Säumnis voraus, und zwar entweder eine Säumnis im Termin zur mündlichen Verhandlung oder eine Säumnis im schriftlichen Vorverfahren (sogleich II.). Des Weiteren schließen §§ 335, 337 ZPO auf der Säumnis beruhende Entscheidungen aus (unten III.). Die weiteren Voraussetzungen für säumnisspezifische Entscheidungen hängen davon ab, ob ein Versäumnisurteil gegen den Beklagten (IV.) oder den Kläger (V.) ergehen soll oder ob bei Säumnis einer Partei nach Lage der Akten entschieden werden soll (VI.) oder ob beide Parteien säumig sind (VII.). **565**",
+    "parent_id": "header_1",
+    "type": "content"
+  },
+  {
+    "id": "header_5",
+    "label": "## **II. Säumnis im Termin oder im Vorverfahren**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "header_6",
+    "label": "## **1. Termin zur mündlichen Verhandlung**",
+    "parent_id": "header_5",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_7",
+    "label": "- Es muss zunächst ein Termin zur mündlichen Verhandlung (§§ 272, 279 ZPO) vor dem Prozessgericht bestimmt werden sein (Ausnahme: § 331 Abs. 3 ZPO). Dabei muss es sich um einen **Verhandlungstermin** handeln; im Güteverfahren (§ 278 ZPO) kann ein Versäumnisurteil nicht ergehen. Erscheint aber eine Partei in der Güteverhandlung nicht, schließt sich die mündliche Verhandlung in der Regel unmittelbar an (§ 279 Abs. 1 S. 1 ZPO). Hier ist ein Versäumnisurteil dann möglich. Werden für die Erledigung eines Rechtsstreits mehrere Verhandlungstermine benötigt (Vertagung oder Fortsetzung), kann in jedem der Termine ein Versäumnisurteil erlassen werden (§ 332 ZPO). **566**",
+    "parent_id": "header_6",
+    "type": "content"
+  },
+  {
+    "id": "content_8",
+    "label": "- **Beispielsfall:** Der Kläger verlangt vom Beklagten Bezahlung einer Rechnung. Im ersten Verhandlungstermin erscheinen beide Parteien und verhandeln zur Sache. Der Rechtsstreit erweist sich jedoch als komplex und kann nicht erschöpfend erörtert werden. Das Gericht legt daher einen zweiten Termin zur mündlichen Verhandlung fest. Der Beklagte erscheint nicht. Kann das Gericht ein Versäumnisurteil erlassen? **567**",
+    "parent_id": "header_6",
+    "type": "content"
+  },
+  {
+    "id": "content_9",
+    "label": "Das Gericht kann im zweiten Termin ein Versäumnisurteil gegen den Beklagten erlassen, auch wenn er im ersten Termin nichts säumig gewesen ist (§ 332 ZPO). Die mündliche Verhandlung wird auch dann, wenn sie vertagt oder fortgesetzt wird, als eine Einheit angesehen.",
+    "parent_id": "header_6",
+    "type": "content"
+  },
+  {
+    "id": "content_10",
+    "label": "Fehlt eine Partei nur während der Beweisaufnahme, wirkt sich das für sie verfahrensrechtlich nicht negativ aus, da die Beweisaufnahme ein eigenständiger Verfahrensabschnitt ist. Allerdings kann die Partei in der sich unmittelbar anschließenden mündlichen Verhandlung (vgl. § 370 Abs. 1 ZPO) säumig sein.",
+    "parent_id": "header_6",
+    "type": "content"
+  },
+  {
+    "id": "header_11",
+    "label": "## **2. Schriftliches Vorverfahren**",
+    "parent_id": "header_5",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_12",
+    "label": "Der Beklagte kann auch im schriftlichen Vorverfahren säumig sein (§ 331 Abs. 3 ZPO). Dass dies voraussetzt, dass er gem. § 276 Abs. 1 S. 1 ZPO dazu aufgefordert wurde, seine Verteidigungsbereitschaft schriftlich anzuzeigen, und dass er gem. § 276 Abs. 2 ZPO über die Säumnisfolgen belehrt wurde. **568**",
+    "parent_id": "header_11",
+    "type": "content"
+  },
+  {
+    "id": "header_13",
+    "label": "## **3. Säumnis**",
+    "parent_id": "header_5",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_14",
+    "label": "Eine Partei ist im **Termin zur mündlichen Verhandlung** gem. § 220 Abs. 2 ZPO säumig, wenn sie nach dem Aufruf der Sache (§ 220 Abs. 1 ZPO) bis zum Schluss (§ 136 Abs. 4 ZPO) **569**",
+    "parent_id": "header_13",
+    "type": "content"
+  },
+  {
+    "id": "content_15",
+    "label": "- •• nicht erscheint (§§ 330, 331 Abs. 1 S. 1, 331a, 251a ZPO) oder",
+    "parent_id": "header_13",
+    "type": "content"
+  },
+  {
+    "id": "content_16",
+    "label": "- •• zwar erscheint, aber nicht verhandelt (§§ 333, 251a ZPO).",
+    "parent_id": "header_13",
+    "type": "content"
+  },
+  {
+    "id": "content_17",
+    "label": "Für das Vorliegen der Säumnis ist ohne Bedeutung, ob die Partei den Termin schuldhaft versäumt hat. Fehlendes Verschulden schließt ein Versäumnisurteil aber nach § 337 S. 1 Fall 2 ZPO aus (→ Rn. 573) und ermöglicht eine Berufung gegen ein zweites Versäumnisurteil (§ 514 Abs. 2 S. 1 ZPO).",
+    "parent_id": "header_13",
+    "type": "content"
+  },
+  {
+    "id": "content_18",
+    "label": "Eine Partei ist **nicht erschienen**, wenn sie zum Termin weder persönlich vor Gericht auftritt noch durch eine geeignete Person vertreten ist. Besteht für einen Prozess nach § 78 ZPO Anwaltszwang, ist die Partei auch säumig, wenn sie zwar persönlich, aber ohne postulationsfähigen Rechtsanwalt vor Gericht erscheint. Ist persönliches Erscheinen angeordnet (§ 141 Abs. 1 ZPO) und erscheint nur der Anwalt, nicht aber die Partei, liegt keine Säumnis vor (§ 141 Abs. 3 ZPO).",
+    "parent_id": "header_13",
+    "type": "content"
+  },
+  {
+    "id": "content_19",
+    "label": "Nach § 333 ZPO ist eine Partei auch dann nicht erschienen anzusehen, wenn sie oder ihr Prozessbevollmächtigter zwar erscheint, aber **nicht verhandelt** (s. auch § 220 Abs. 2 ZPO). Eine Partei verhandelt nicht, wenn sie sich zum materiellen Verfahrensgegenstand nicht äußert. Stellt eine Partei also nur einen Verfahrensantrag, zB auf Ablehnung eines Richters oder auf Aussetzung des Verfahrens, verhandelt sie nicht. Im ersten Termin verhandelt eine Partei in der Regel in der Weise, dass sie die Sachanträge (zB auf Verurteilung des Beklagten zur Zahlung oder auf Abweisung der Klage) stellt (zu einer Ausnahme: OLG Zweibrücken OLGZ 83, 329). In weiteren Terminen genügt dann die Erörterung der Sache, auch etwa der Sachurteilsvoraussetzungen, für ein Verhandeln. **Unvollständiges** Verhandeln steht dem Nichterscheinen nicht gleich (§ 334 ZPO).",
+    "parent_id": "header_13",
+    "type": "content"
+  },
+  {
+    "id": "content_20",
+    "label": "Im **schriftlichen Vorverfahren** ist der Beklagte säumig, wenn er seine Verteidigungsbereitschaft nicht anzeigt (§ 331 Abs. 3 S. 1 ZPO, näher → Rn. 580). Der Kläger kann hier nicht säumig sein, weil seine Klageschrift schon vorliegen muss, um den Prozess überhaupt in Gang zu bringen (§ 253 ZPO). Das Ausbleiben weiterer Schriftsätze führt nicht zur Säumnis.",
+    "parent_id": "header_13",
+    "type": "content"
+  },
+  {
+    "id": "header_21",
+    "label": "## **4. Säumnis und weitere Beteiligte**",
+    "parent_id": "header_5",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_22",
+    "label": "Ein Prozess kann von mehreren Parteien geführt werden oder es können Dritte als Beteiligte hinzutreten (dazu → Rn. 730 ff.). In einigen dieser Fälle, so bei einer notwendigen Streitgenossenschaft, einer Nebenintervention oder einem Beitritt nach Streitverkündigung, werden Prozesshandlungen des erschienenen Beteiligten der säumigen Partei zugerechnet (§§ 62, 67, 74 ZPO). Deshalb kann ein Versäumnisurteil nicht ergehen, solange einer der weiteren Beteiligten nicht säumig ist. **570**",
+    "parent_id": "header_21",
+    "type": "content"
+  },
+  {
+    "id": "content_23",
+    "label": "**Beispielsfall:** Der Kläger verlangt von den Beklagten A und B Übereignung eines Mähdreschers im Wert von 7.000 EUR. Die Beklagten haben ihn gemeinsam geerbt und an den Kläger verkauft, weil sie mit ihm nichts anfangen können. Nach Abschluss des Kaufvertrages haben die Beklagten jedoch einen weiteren Interessenten gefunden, der bereit ist, mehr zu zahlen. Sie weigern sich daher, den Mähdrescher an den Kläger zu übereignen. Im Termin zur mündlichen Verhandlung erscheinen der Kläger und A jeweils mit ihren Anwälten. Sie verhandeln zur Sache, B erscheint nicht. Der Anwalt des Klägers beantragt daher, ein Versäumnisurteil gegen B zu erlassen. Wie wird das Gericht entscheiden? **571**",
+    "parent_id": "header_21",
+    "type": "content"
+  },
+  {
+    "id": "content_24",
+    "label": "Damit gegen den Beklagten B ein Versäumnisurteil ergehen kann, muss dieser gem. § 331 Abs. 1 S. 1 ZPO im Termin zur mündlichen Verhandlung säumig sein. Liegt zwischen A und B eine notwendige Streitgenossenschaft vor, bewirkt § 62 Abs. 1 ZPO, dass B als durch A und dessen Anwalt vertreten angesehen wird. Voraussetzung für eine notwendige Streitgenossenschaft ist nach § 62 Abs. 1 Fall 1 ZPO, dass eine Entscheidung gegen die Beklagten nur einheitlich ergehen kann. Das folgt hier aus § 2040 Abs. 1 BGB, demzufolge Erben nur gemeinschaftlich über Nachlassgegenstände verfügen können (sog. Gesamthandsklage). B ist also nicht säumig. Gegen ihn darf kein Versäumnisurteil ergehen.",
+    "parent_id": "header_21",
+    "type": "content"
+  },
+  {
+    "id": "header_25",
+    "label": "## **III. Kein Ausschluss nach §§ 335, 337 ZPO**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "header_26",
+    "label": "## **1. Unzulässigkeit nach § 335 ZPO**",
+    "parent_id": "header_25",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_27",
+    "label": "Nach §335 Abs. 1 Nr. 1 ZPO ist der Antrag auf Säumnisentscheidung zurückzuweisen, wenn die erschienene Partei einen Nachweis nicht führen kann, der vom Gericht wegen eines von Amtswegen zu berücksichtigenden Umstandes verlangt wurde. Gemeint ist damit das **behebbare Fehlen einer Sachurteilsvoraussetzung**. Erscheint z. B. im Prozess für den Beklagten niemand und kann der erschienene Kläger das Vorliegen einer Gerichtsstandsvereinbarung (s. § 38 ZPO) und damit die Zuständigkeit des Gerichts nicht nachweisen, kann eine Säumnisentscheidung gegen den Beklagten nicht ergehen. **572**",
+    "parent_id": "header_26",
+    "type": "content"
+  },
+  {
+    "id": "content_28",
+    "label": "Nach § 335 Abs. 1 Nr. 2 ZPO kann ein Versäumnisurteil nur ergehen, wenn die säumige Partei **ordnungsgemäß geladen** worden ist. Eine Ladung kann erfolgen:",
+    "parent_id": "header_26",
+    "type": "content"
+  },
+  {
+    "id": "content_29",
+    "label": "- •• durch ordnungsgemäße Zustellung einer Ladungsschrift, wobei Ladungs- und Einlassungsfristen zu beachtensind (§§ 217, 274 Abs. 2, 3 ZPO), oder",
+    "parent_id": "header_26",
+    "type": "content"
+  },
+  {
+    "id": "content_30",
+    "label": "- •• im Rahmen einer verkündeten Entscheidung, z. B. in einem Vertagungsbeschluss; eine gesonderte Ladung ist dann entbehrlich (§ 218 ZPO).",
+    "parent_id": "header_26",
+    "type": "content"
+  },
+  {
+    "id": "content_31",
+    "label": "Nach § 335 Abs. 1 Nr. 3 ZPO ist eine Versäumnisentscheidung unzulässig, wenn **Sachanträge oder Tatsachenvortrag dem Säumigen nicht rechtzeitig** (§§ 132, 274 Abs. 3 ZPO) **mitgeteilt** wurden. Bedeutung erlangt die Regelung nur für die Säumnis des Beklagten, da bei Säumnis des Klägers die Klage ohne Sachprüfung abgewiesen wird, es also auf Anträge und Tatsachen-",
+    "parent_id": "header_26",
+    "type": "content"
+  },
+  {
+    "id": "content_32",
+    "label": "vortrag des Beklagten nicht ankommt. Bei Säumnis des Beklagten aber muss dieser davor geschützt werden, dass der Kläger eine zunächst nicht schlüssige Klage in letzter Minute noch schlüssig macht, und dass dann für den Beklagten unvorhersehbar ein Versäumnisurteil zu seinen Lasten ergehen kann.",
+    "parent_id": "header_26",
+    "type": "content"
+  },
+  {
+    "id": "content_33",
+    "label": "§ 335 Abs. 1 Nr. 4 ZPO stellt nichts klar, was sich an sich schon aus § 331 Abs. 3 S. 1 ZPO (\"entgegen § 276 Abs. 1 S. 1, Abs. 2\") ergibt.",
+    "parent_id": "header_26",
+    "type": "content"
+  },
+  {
+    "id": "content_34",
+    "label": "Schließlich ist nach § 335 Abs. 1 Nr. 5 ZPO eine Säumnisentscheidung unzulässig, wenn der **Prozessbevollmächtigte** gem. § 79 Abs. 3 ZPO im betreffenden Termin zurückgewiesen oder ihm die weitere Vertretung untersagt wurde oder wenn dies zwar vorher geschah, aber der Partei nicht rechtzeitig mitgeteilt wurde.",
+    "parent_id": "header_26",
+    "type": "content"
+  },
+  {
+    "id": "header_35",
+    "label": "## **2. Vertagung nach § 337 ZPO**",
+    "parent_id": "header_25",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_36",
+    "label": "Ein Versäumnisurteil darf nicht ergehen, wenn",
+    "parent_id": "header_35",
+    "type": "content"
+  },
+  {
+    "id": "content_37",
+    "label": "**573**",
+    "parent_id": "header_35",
+    "type": "content"
+  },
+  {
+    "id": "content_38",
+    "label": "- •• die Einlassungs- oder Ladungsfrist (§§ 217, 274 Abs. 2 ZPO) zu kurz bemessen ist oder",
+    "parent_id": "header_35",
+    "type": "content"
+  },
+  {
+    "id": "content_39",
+    "label": "- •• die säumige Partei ohne ihr Verschulden am Erscheinen oder am Verhandeln (§§ 333, 220 Abs. 2 ZPO, dazu BGHN JW 2016, 3248 Rn. 9 ff.) verhindert gewesen ist. Der Verschuldensmaßstab entspricht dem bei der Wiedereinsetzung in den vorigen Stand, § 233 ZPO (BGHN JW 1998, 3125), dazu → Rn. 295 ff.",
+    "parent_id": "header_35",
+    "type": "content"
+  },
+  {
+    "id": "content_40",
+    "label": "Gelangt das Gericht zur Überzeugung, dass einer der beiden Gründe vorliegt, muss es die Verhandlung von Amtswegen vertagen (§ 337 ZPO).",
+    "parent_id": "header_35",
+    "type": "content"
+  },
+  {
+    "id": "header_41",
+    "label": "## **IV. Versäumnisurteil gegen den Beklagten**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_42",
+    "label": "Ein Versäumnisurteil gegen den Beklagten ist praktisch der häufigste Fall des Versäumnisurteils. Es kann entweder bei Säumnis in der mündlichen Verhandlung (§ 331 Abs. 1, 2 ZPO) oder bei Säumnis im schriftlichen Vorverfahren (§ 331 Abs. 3 ZPO) ergehen. **574**",
+    "parent_id": "header_41",
+    "type": "content"
+  },
+  {
+    "id": "content_43",
+    "label": "**Klausurhinweis:** Das Versäumnisurteil gegen den Beklagten kommt in Klausuren besonders häufig vor, denn es eignet sich gut dazu, prozessuale Fragen mit einer klassischen materiell-rechtlichen Thematik zu kombinieren. Das liegt daran, dass der Sachverhaltsvortrag des Klägers als richtig unterstellt wird und so eine Klausurlösung aufgrund eines feststehenden Sachverhalts entwickelt werden kann, obwohl Tatsachen streitig sind. Den Prüfungsaufbau für Versäumnisurteile sollte man sich merken; → Rn. 586.",
+    "parent_id": "header_41",
+    "type": "content"
+  },
+  {
+    "id": "header_44",
+    "label": "## **1. Versäumnisurteil gem. § 331 Abs. 1, 2 ZPO**",
+    "parent_id": "header_41",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_45",
+    "label": "- Neben den oben unter II. und III. genannten Voraussetzungen müssen für ein Versäumnisurteil gegen den Beklagten noch folgende vorliegen: **575**",
+    "parent_id": "header_44",
+    "type": "content"
+  },
+  {
+    "id": "content_46",
+    "label": "- •• Antrag des Klägers auf Erlass eines Versäumnisurteils,",
+    "parent_id": "header_44",
+    "type": "content"
+  },
+  {
+    "id": "content_47",
+    "label": "- •• Zulässigkeit der Klage und",
+    "parent_id": "header_44",
+    "type": "content"
+  },
+  {
+    "id": "content_48",
+    "label": "- •• Schlüssigkeit des Klägervortrags.",
+    "parent_id": "header_44",
+    "type": "content"
+  },
+  {
+    "id": "header_49",
+    "label": "## **a) Antrag des Klägers**",
+    "parent_id": "header_44",
+    "type": "header_l3"
+  },
+  {
+    "id": "content_50",
+    "label": "Der Kläger muss den Erlaß eines Versäumnisurteils gem. § 331 Abs. 1 S. 1 ZPO beantragen. Dazu ist ein Prozessantrag erforderlich, weil eine besondere Entscheidungsform begehrt wird (HK-ZPO/*Kießling* Vor §§ 330–347 Rn. 8). Umstritten ist, ob dieser Prozessantrag in dem Sachantrag liegen kann. Teile der Literatur fordern einen **zusätzlichen Prozessantrag**, der auf die Verurteilung des Beklagten \"durch Versäumnisurteil\" gerichtet sein muss. Ansonsten dürfte das Gericht kein Versäumnisurteil erlassen (MüKoZPO/*Prütting* § 331 Rn. 6; Zöller/*Herget* ZPO § 331 Rn. 5). Der BGH und die wohlgemeinte HL (BGHZ 37, 80 (83); so auch Stein/Jonas/*Bartels* ZPO Vor § 330 Rn. 14) halten einen speziellen Antrag zu Recht nicht für notwendig. Vielmehr ist ein **Sachantrag**, der auf Verurteilung des Beklagten gerichtet ist, in dem Sinne **auszulegen**, dass der Kläger sein Ziel auf jedem verfahrensrechtlich zulässigen Weg zu erreichen versucht. Deshalb muss das Gericht die Voraussetzungen für ein Versäumnisurteil auch ohne speziellen Antrag prüfen und ein entsprechendes Urteil erlassen, wenn sie vorliegen. Nur dann, wenn der Kläger zu erkennen gibt, dass er ein Versäumnisurteil nicht beantragen will, muss das Gericht vertagen. **576**",
+    "parent_id": "header_49",
+    "type": "content"
+  },
+  {
+    "id": "header_51",
+    "label": "## **b) Zulässigkeit der Klage**",
+    "parent_id": "header_44",
+    "type": "header_l3"
+  },
+  {
+    "id": "content_52",
+    "label": "Das Versäumnisurteil gegen den Beklagten ist ein Sachurteil mit voller Rechtskraftwirkung. Folglich muss das Gericht prüfen, ob die Sachurteilsvoraussetzungen vorliegen. Fehlt eine Zulässigkeitsvoraussetzung **endgültig**, wird die Klage gem. § 331 Abs. 2 Hs. 2 ZPO durch Prozessurteil abgewiesen. Die Entscheidung ist kein Versäumnisurteil, weil sie nicht aufgrund der Säumnis des Beklagten ergeht. Sie wird häufig als „unechtes Versäumnisurteil“ bezeichnet. Die Bezeichnung ist unzutreffend, weil gerade kein Versäumnisurteil gefällt wird. **577**",
+    "parent_id": "header_51",
+    "type": "content"
+  },
+  {
+    "id": "content_53",
+    "label": "Liegt hingegen nur ein **behebbarer** Zulässigkeitsmangel vor, oder ist das Gericht von der Zulässigkeit der Klage nicht vollständig überzeugt, ist der Antrag auf Erlass eines Versäumnisurteils nach § 335 Abs. 1 Nr. 1 ZPO als unzulässig zurückzuweisen. In der Regel wird die Sitzung vertagt, so dass es dem Kläger möglich ist, die Zulässigkeitsmängel zu beseitigen oder Nachweise für die Zulässigkeit zu beschaffen.",
+    "parent_id": "header_51",
+    "type": "content"
+  },
+  {
+    "id": "content_54",
+    "label": "<https://doi.org/10.17104/9783406759413-255> Generiert durch Universitäts- und Landesbibliothek Münster, am 19.05.2025, 15:09:56. Das Erstellen und Weitergeben von Kopien dieses PDFs ist nicht zulässig.",
+    "parent_id": "header_51",
+    "type": "content"
+  },
+  {
+    "id": "header_55",
+    "label": "#### **c) Schlüssigkeit der Klage**",
+    "parent_id": "header_44",
+    "type": "header_l3"
+  },
+  {
+    "id": "content_56",
+    "label": "Die Säumnis des Beklagten bewirkt, dass das **tatsächliche mündliche Vorbringen des Klägers** gem. §§ 331 Abs. 1 S. 1, 288 ZPO in seinem gesamten Umfang **als zugestanden gilt**. Die Säumnis des Beklagten hat also Auswirkungen auf den Tatsachenstoff, den das Gericht seiner Entscheidung zugrunde legt. Die Fiktion gilt selbst dann, wenn eine vorherige Beweisaufnahme zu einem anderen Ergebnis geführt hat. Eine Grenze bildet jedoch die Wahrheitspflicht aus § 138 Abs. 1 ZPO. Ergibt sich aus dem bisherigen Prozessverlauf, insbesondere aus einer Beweisaufnahme, dass der Kläger bewusst Unwahres gesagt hat, tritt keine Geständniswirkung ein (MüKo ZPO/*Prütting* § 331 Rn. 20). **578**",
+    "parent_id": "header_55",
+    "type": "content"
+  },
+  {
+    "id": "content_57",
+    "label": "Auf der Basis des zugestandenen Tatsachenvortrags prüft das Gericht, ob der Klageantrag schlüssig ist, dh., ob die tatsächlichen Behauptungen des Klägers seinen Antrag materiell-rechtlich begründen (§ 331 Abs. 2 ZPO). Trägt der Kläger nicht alle anspruchsbegründenden Tatsachen vor oder bringt er selbst Tatsachen vor, die eine Einrede oder Einwendung begründen, zB nach §§ 134, 138 oder 242 BGB, ist seine Klage nicht schlüssig.",
+    "parent_id": "header_55",
+    "type": "content"
+  },
+  {
+    "id": "content_58",
+    "label": "Ist die **Klage schlüssig**, gibt das Gericht dem Antrag des Klägers statt.",
+    "parent_id": "header_55",
+    "type": "content"
+  },
+  {
+    "id": "content_59",
+    "label": "Der Kläger verlangt vom Beklagten Kaufpreiszahlung. Im Termin zur mündlichen Verhandlung erscheint der Beklagte nicht. Der Kläger trägt vor, dass der Kaufvertrag abgeschlossen worden sei und er selbst die geschuldete Leistung – Lieferung eines Fernsehgerätes – erbracht habe. Der Beklagte hatte im schriftlichen Vorverfahren den Vertragsabschluss ebenso bestritten wie die Lieferung des Fernsehgerätes. Im Termin gilt das gesamte Vorbringen des Klägers als zugestanden. Damit bildet es die Tatsachengrundlage für die Entscheidung des Gerichts. Auf die abweichende Darstellung des Beklagten kommt es nicht mehr an.",
+    "parent_id": "header_55",
+    "type": "content"
+  },
+  {
+    "id": "content_60",
+    "label": "Ist die **Klage nicht schlüssig**, wird sie trotz Säumnis des Beklagten durch ein kontradiktorisches Sachurteil abgewiesen. Es handelt sich nicht um ein Versäumnisurteil, da es nicht auf der Säumnis beruht und nicht gegen die säumige Partei ergeht. Auch hier ist manchmal irreführend vom \"unechten Versäumnisurteil\" die Rede.",
+    "parent_id": "header_55",
+    "type": "content"
+  },
+  {
+    "id": "content_61",
+    "label": "Ist die **Klage teilweise schlüssig, teilweise nicht schlüssig**, ergeht nach § 301 ZPO ein Teilversäumnisurteil bezüglich des schlüssigen Teils, im Übrigen wird sie durch kontradiktorisches Sachurteil abgewiesen (BeckOKZPO/ *Toussaint* § 331 Rn. 12b).",
+    "parent_id": "header_55",
+    "type": "content"
+  },
+  {
+    "id": "content_62",
+    "label": "**Beispielsfall:** Der Kläger verlangt vom Beklagten die Duldung der Zwangsvollstreckung indessen Grundstück. Er trägt in der mündlichen Verhandlung vor, er habe dem Beklagten, als dieser im Alter von 18 Jahren aus der Ukraine eingewandert sei und zusätzlich dazu gerade ererbtes Grundstück Startkapital gebraucht habe, ein Darlehen in Höhe von 150.000 EUR gewährt. Die Darlehenssumme und die Zinsen von weiteren 150.000 EUR für ein Jahr sei durch eine Grundschuld in Höhe von 300.000 EUR gesichert. Da der Beklagte nicht zahle, verlange er, der Kläger, Duldung der Zwangsvollstreckung indas Grundstück. Der Beklagte ist in der mündlichen Verhandlung **579** nicht anwesend. Deshalb beantragt der Kläger den Erlass eines Versäumnisurteils gegen den Beklagten. Wird das Gericht ein Versäumnisurteil erlassen?",
+    "parent_id": "header_55",
+    "type": "content"
+  },
+  {
+    "id": "content_63",
+    "label": "Der Kläger muss, damit das Gericht gegen den Beklagten ein Versäumnisurteil erlässt, seinen Klageanspruch schlüssig vortragen. Die Säumnis des Beklagten bewirkt nach § 331 Abs. 1 ZPO, dass das tatsächliche Vorbringende des Klägers als zugestanden gilt. Trägt aber schon der Vortrag des Klägers den Anspruch nicht, wird die Klage als unbegründet abgewiesen. Hier könnte sich ein Anspruch des Klägers aus §§ 1147, 1192 Abs. 1 BGB ergeben. Dass setzt voraus, dass der Kläger Inhaber einer Grundschuld ist. Die für den Kläger eingetragene Grundschuld könnte aber nach dessen eigenem Vortrag gem. § 138 Abs. 2 BGB nicht sein. Er trägt vor, dem Beklagten ein Darlehen gewährt zu haben, dessen Zins 100 % für ein Jahr beträgt. Auch trägt er Tatsachen vor, die die Unerfahrenheit des Beklagten ergeben (Alter, Einwanderer). Der Darlehensvertrag verstößt dahergestellt § 138 Abs. 2 BGB (Wucher), sodass er nichtig ist. Der Kläger hat somit keinen Anspruch auf Zahlung der Zinsen. In solchen Fällen ist neben dem Darlehensvertrag regelmäßig auch die sichernde Geschäft, hier die Grundschuld, nichtig (BGH NJW 1982, 2767). Auch wird nach hM beim Wucher das Rechtsgeschäft grundsätzlich nicht mit angemessener Gegenleistung aufrechterhalten (Palandt/*Ellenberger* BGB § 138 Rn. 75). Der Kläger trägt somit einen Sachverhalt vor, der selbst bei unterstellter Richtigkeit den geltendgemachten Anspruch nicht trägt. Das Gericht wird kein Versäumnisurteil gegen den Beklagten erlassen und die Klage als unbegründet abweisen.",
+    "parent_id": "header_55",
+    "type": "content"
+  },
+  {
+    "id": "header_64",
+    "label": "## **2. Versäumnisurteil gem. § 331 Abs. 3 ZPO**",
+    "parent_id": "header_41",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_65",
+    "label": "Gegen den Beklagten kann auch im schriftlichen Vorverfahren ein Versäumnisurteil erlassen werden (§ 331 Abs. 3 ZPO). Eine mündliche Verhandlung findet dann nicht statt. Neben den oben unter II. und III. genannten Voraussetzungen für eine Säumnisentscheidung müssen vorliegen: **580**",
+    "parent_id": "header_64",
+    "type": "content"
+  },
+  {
+    "id": "content_66",
+    "label": "- •• Antrag des Klägers auf Erlass eines Versäumnisurteils,",
+    "parent_id": "header_64",
+    "type": "content"
+  },
+  {
+    "id": "content_67",
+    "label": "- •• Zulässigkeit der Klage und",
+    "parent_id": "header_64",
+    "type": "content"
+  },
+  {
+    "id": "content_68",
+    "label": "- •• Schlüssigkeit des Klägervortrages.",
+    "parent_id": "header_64",
+    "type": "content"
+  },
+  {
+    "id": "content_69",
+    "label": "Der **Antrag** auf Erlass des Versäumnisurteils kann gem. § 331 Abs. 3 S. 2 ZPO schon in der Klageschrift gestellt werden. **Zulässigkeit und Schlüssigkeit** der Klage werden dann anhand der Klageschrift geprüft. Ist die Klage zulässig und schlüssig, stellt das Gericht der Partei das Urteil ohne Verkündung zu (§ 310 Abs. 3 ZPO). Hält das Gericht die Klage in der Hauptforderung für unzulässig oder unschlüssig, muss es, wie sich im Umkehrschluss aus § 331 Abs. 3 S. 3 ZPO ergibt, einer mündlichen Verhandlung anberaumen (hM, Zöller / *Herget* ZPO § 331 Rn. 13; anders *Jauernig/Hess* § 66 Rn. 18). Eine Entscheidung gegen den Kläger im schriftlichen Verfahren ist nach dieser Vorschrift nur über Nebenforderungen zulässig. Damit wird dem Umstand Rechnung getragen, dass der Kläger im Verfahren willig ist. Er soll Gelegenheit erhalten, durch Ergänzungen noch Zulässigkeit und Schlüssigkeit der Klage herbeizuführen.",
+    "parent_id": "header_64",
+    "type": "content"
+  },
+  {
+    "id": "header_70",
+    "label": "## **V. Versäumnisurteil gegen den Kläger**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_71",
+    "label": "Ist der Klägers säumig, kann nach § 330 ZPO gegen ihn ein Versäumnisurteil erlassen werden. Das Versäumnisverfahren gegen den Kläger unterscheidet sich von dem gegen einen säumigen Beklagten in einem bedeutenden Punkt: **Eine materiell-rechtliche Prüfung der Klage findet nicht statt**. Die Schlüssigkeit bzw. Unschlüssigkeit wird nicht geprüft. Die Klage wird auf Antrag des Beklagten allein aufgrund der Säumnis des Klägers abgewiesen. Dennoch ist die Entscheidung ein Sachurteil. Diese Regelung beruht auf der Annahme, dass ein Kläger, der den Rechtsstreit initiiert hat, sein Interesse am Prozess verloren haben muss, wenn er zur mündlichen Verhandlung nicht erscheint. Ein Versäumnisurteil gegen den Kläger im schriftlichen Vorverfahren ist nicht möglich. Ein Versäumnisurteil gegen den Kläger erfordert neben den oben unter II. und III. genannten Voraussetzungen, dass **581**",
+    "parent_id": "header_70",
+    "type": "content"
+  },
+  {
+    "id": "content_72",
+    "label": "- der Beklagte den Erlass eines Versäumnisurteils beantragt und",
+    "parent_id": "header_70",
+    "type": "content"
+  },
+  {
+    "id": "content_73",
+    "label": "- die Klage zulässig ist.",
+    "parent_id": "header_70",
+    "type": "content"
+  },
+  {
+    "id": "header_74",
+    "label": "## **1. Antrag des Beklagten**",
+    "parent_id": "header_70",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_75",
+    "label": "Gem. § 330 ZPO ist zum Erlass des Versäumnisurteils ein Prozessantrag des Beklagten erforderlich. Für die Anforderungen an diesen Antrag stellt sich dieselbe Problematik wie beim entsprechenden Antrag des Klägers. Auch beim Beklagten ist nach der Rechtsprechung und der hL der Sachantrag, dh. der Klageabweisungsantrag, regelmäßig dahingehend auszulegen, dass er den Prozessantrag enthält. **582**",
+    "parent_id": "header_74",
+    "type": "content"
+  },
+  {
+    "id": "header_76",
+    "label": "## **2. Zulässigkeit der Klage**",
+    "parent_id": "header_70",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_77",
+    "label": "Damit ein echtes Versäumnisurteil (= klageabweisendes Sachurteil) gegen den Kläger erlassen werden kann, müssen die Sachurteilsvoraussetzungen vorliegen. Allerdings ist der Beklagte für das Vorliegen der Voraussetzungen beweispflichtig. Gelingt ihm dieser Nachweis nicht, wird die Klage durch Prozessurteil als unzulässig abgewiesen (\"unechtes Versäumnisurteil\", da es nicht aufgrund der Säumnis ergeht). **583**",
+    "parent_id": "header_76",
+    "type": "content"
+  },
+  {
+    "id": "content_78",
+    "label": "![]( _page_9_Figure_1.jpeg )",
+    "parent_id": "header_76",
+    "type": "content"
+  },
+  {
+    "id": "header_79",
+    "label": "## **VI. Entscheidung nach Aktenlage, § 331a ZPO**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_80",
+    "label": "Beim Ausbleiben einer Parteikannder Gegnerstatte eines Versäumnisurteils nach §§ 330, 331 ZPO Entscheidung nach Aktenlage beantragen (§ 331a ZPO). Dieses Vorgehen hat den Vorteil, dass das darauf ergehende Urteil die Instanz endgültig abschließt. Dagegen ist ein Versäumnisurteil grds. nur mit dem Einspruch angreifbar (§§ 338, 514 ZPO), der bei Erfolg das Verfahren in die Lage vor Säumnis zurückversetzt (§ 342 ZPO). **584**",
+    "parent_id": "header_79",
+    "type": "content"
+  },
+  {
+    "id": "content_81",
+    "label": "Allerdings ist ein Urteil nach Lage der Akten nur zulässig, wenn in einem früheren Termin mündlich verhandelt wurde (§ 331a S. 2 i.V.m. § 251a Abs. 2 S. 1 ZPO). Die praktische Bedeutung des § 331a S. 1 ZPO ist daher gering (HK-ZPO/*Kießling* § 331a Rn. 2). Weitere Grund dafür ist, dass im Fall der Entscheidung nach Aktenlage bei Säumnis des Beklagten dem Kläger die Geständnisfiktion des § 331 Abs. 1 S. 1 ZPO nicht zugutekommt.",
+    "parent_id": "header_79",
+    "type": "content"
+  },
+  {
+    "id": "header_82",
+    "label": "## **VII. Säumnis beider Parteien**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_83",
+    "label": "- Sollte es zu der in der Praxis eher seltenen Konstellation kommen, dass beide Parteien schuldig sind, steht dem Gericht drei verschiedene Reaktionsmöglichkeiten offen. Das Gericht kann **585**",
+    "parent_id": "header_82",
+    "type": "content"
+  },
+  {
+    "id": "content_84",
+    "label": "- •• den Termingemäß § 251a Abs. 2 S. 4, § 227 Abs. 1 S. 2 Nr. 1 ZPO vertagen,",
+    "parent_id": "header_82",
+    "type": "content"
+  },
+  {
+    "id": "content_85",
+    "label": "- •• gem. § 251 a Abs. 1, 2 ZPO eine Entscheidung nach Lage der Akten treffen, sofern bereits in einem früheren Termin mündlich verhandelt worden ist, oder",
+    "parent_id": "header_82",
+    "type": "content"
+  },
+  {
+    "id": "content_86",
+    "label": "- •• gem. § 251a Abs. 3 ZPO das Ruhendes Verfahren anordnen.",
+    "parent_id": "header_82",
+    "type": "content"
+  },
+  {
+    "id": "header_87",
+    "label": "#### **Zusammenfassender Überblick über säumnisspezifische Entscheidungen: 586**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_88",
+    "label": "**Klausurhinweis:** Die folgenden Tabellen enthalten zugleich Prüfungsschemata für die Klausur. Prüfungsrelevant sind vor allem die Versäumnisurteile aus der ersten Tabelle. Hier lässt sich den jeweiligen Spalten das Prüfungsschema entnehmen. Es genügt aber, sich das Schema für das Versäumnisurteil gegen den im Termin säumigen Beklagten zu merken (linke Spalte, § 331 Abs. 1, 2 ZPO). Die Abweichungen, die sich für die beiden anderen Säumnisurteile ergeben, erschließen sich ohne Weiteres aus der Lektüre des Gesetzes.",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_89",
+    "label": "| Voraussetzungen für ein Versäumnisurteil gegen den …                    |                                                                                                          |                                                                         |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_90",
+    "label": "|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|--|",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_91",
+    "label": "| … Beklagten                                                             |                                                                                                          | … Kläger                                                                |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_92",
+    "label": "| § 331 Abs. 1, 2                                                         | § 331 Abs. 3                                                                                             | § 330                                                                   |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_93",
+    "label": "| Zulässigkeit der Klage                                                  | Zulässigkeit der Klage                                                                                   | Zulässigkeit der Klage                                                  |   |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_94",
+    "label": "| Antrag des Klägers auf Erlass des Versäumnisurteils              | Antrag des Klägers auf Erlass des Versäumnisurteils                                                  | Antrag des Beklagten auf Erlass des Versäumnisurteils            |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_95",
+    "label": "| Termin zur mündlichen<br>Verhandlung                                    | Aufforderung zur schriftlichen<br>Anzeige der Verteidigungsbereitschaft gem.<br>§276 Abs. 1 S. 1, Abs. 2 | Termin zur mündlichen<br>Verhandlung                                    |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_96",
+    "label": "| Säumnis, dh Nichter<br>scheinen/Nichtverhandeln, §§ 220 Abs. 2, 333 | Säumnis, dh Nichtanzeige<br>der Verteidigungsbereitschaft                                            | Säumnis, dh Nichter<br>scheinen/Nichtverhandeln, §§ 220 Abs. 2, 333 |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_97",
+    "label": "| kein § 335 Abs. 1<br>Nr. 1–3, 5                                         | kein § 335 Abs. 1 Nr. 4                                                                                  | kein § 335 Abs. 1<br>Nr. 1, 2, 5                                        |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_98",
+    "label": "| kein § 337                                                              | –                                                                                                        | kein § 337                                                              |   |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_99",
+    "label": "| Schlüssigkeit der Klage                                                 | Schlüssigkeit der Klage                                                                                  | –                                                                       |   |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_100",
+    "label": "| Voraussetzungen anderer Versäumnisentscheidungen:                                       |                                                                                   |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_101",
+    "label": "|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|--|",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_102",
+    "label": "| ••<br>Entscheidung nach Aktenlage<br>••<br>Vertagung<br>••<br>Ruhen des Verfahrens      | ••<br>Entscheidung nach Aktenlage                                                 |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_103",
+    "label": "| § 251a                                                                                  | § 331a                                                                            |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_104",
+    "label": "| Termin zur mündlichen Verhandlung                                                       | Termin zur mündlichen Verhandlung                                                 |    |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_105",
+    "label": "| Säumnis, dh Nichterscheinen/Nichtverhandeln, §§ 220 Abs. 2, 333, beider Parteien | Säumnis, dh Nichterscheinen/Nichtverhandeln, §§ 220 Abs. 2, 333, einer Partei |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_106",
+    "label": "| kein § 335 Abs. 1 Nr. 1–3, 5                                                            | kein § 335 Abs. 1 Nr. 1–3, 5                                                      |  |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_107",
+    "label": "| kein § 337                                                                              | kein § 337                                                                        |   |",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "content_108",
+    "label": "## **VIII. Rechtsbehelfe gegen das Versäumnisurteil**",
+    "parent_id": "header_87",
+    "type": "content"
+  },
+  {
+    "id": "header_109",
+    "label": "## **VIII. Rechtsbehelfe gegen das Versäumnisurteil**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_110",
+    "label": "Die Partei, gegen die ein echtes Versäumnisurteil erlassen worden ist, kann hiergegen **Einspruch** einlegen (§ 338 ZPO). Ist der Einspruch zulässig, wird der Prozess gem. § 342 ZPO in die Lage zurückversetzt, in der sich vor Eintritt der Säumnis befunden hat. Der Einspruch beseitigt die Folgen der Säumnis und verhindert so den Eintritt der formellen Rechtskraft (Suspensiveffekt). Da der Streit aber in der Ausgangsinstanz verbleibt (kein Devolutiveffekt), ist der Einspruch kein Rechtsmittel, sondern lediglich ein Rechtsbehelf. Eine **Berufung** gegen ein Versäumnisurteil ist gem. § 514 Abs. 1 ZPO nicht möglich (zur Ausnahme in Abs. 2 → Rn. 590 f.). **587**",
+    "parent_id": "header_109",
+    "type": "content"
+  },
+  {
+    "id": "header_111",
+    "label": "## **1. Erstes Versäumnisurteil: Einspruch**",
+    "parent_id": "header_109",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_112",
+    "label": "- Nach § 341 ZPO prüft das Gericht von Amtswegen, ob der Einspruch **588**",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_113",
+    "label": "- •• statthaft (s. dazu § 338 ZPO) und",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_114",
+    "label": "- •• in der gesetzlichen Form und Frist eingelegt worden ist.",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_115",
+    "label": "Der Einspruch ist innerhalb von zwei Wochen ab Zustellung des Urteils (§ 339 Abs. 1 ZPO) schriftlich bei dem Gericht einzulegen, das das Versäumnisurteil erlassen hat (§ 340 Abs. 1 ZPO). Die Einspruchsschrift muss die Bezeichnung des angefochtenen Urteils enthalten und die Erklärung, dass hiergegen Einspruch eingelegt werde (§ 340 Abs. 2 ZPO). Der zulässige Einspruch bewirkt nach § 342 ZPO, dass der Rechtsstreit in die Lage zurückversetzt wird, in der er sich beim Eintritt der Versäumnis befand. Es wird über die Hauptsache also so entschieden, als habe es keine Säumnisentscheidung gegeben.",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_116",
+    "label": "Die Möglichkeit, nach einem Versäumnisurteil durch den Einspruch den Status quo ante wiederherzustellen, wird nicht selten genutzt, um ungenügendes Vorbringen später noch zu ergänzen. Erkennt man im Prozess, dass der eigene Vortrag nicht genügt, lässt man ein Versäumnisurteil gegen sich ergehen und legt Einspruch ein. Bis zum nächsten Verhandlungstermin kann man den fehlenden Vortrag nachholen (sog. **Flucht in die Säumnis**). Bereits vorher schon verspäteter Vortrag bleibt jedoch verspätet. Zudem muss man die Fristen für neues Vorbringen (§ 340 Abs. 3 S. 1 und 2 ZPO) beachten, für die gem. § 340 Abs. 3 S. 3 ZPO die Präklusionsvorschriften in § 296 Abs. 1, 3 und 4 ZPO entsprechend gelten.",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_117",
+    "label": "**Beispielsfall:** Der Beklagte wird wegen eines Skiunfalls auf Schadensersatz verklagt. Der Kläger behauptet, dass der Beklagte den Unfall allein verursacht habe. Der Beklagte wird von Anwalt A vertreten. Tatsächlich trifft den Kläger am Unfallgeschehen eine hälftige Mitschuld, was auch nachweisbar wäre. Leider ist A derartig überlastet, dass er den vom Amtsgericht angesetzten Termin zur mündlichen Verhandlung übersieht. Der Beklagte erscheint daher alleine im Gerichtssaal. Er ist – anders als A – nicht in der Lage, die ihn entlastenden und den Kläger belastenden Umstände vollständig vorzutragen. Was ist dem Beklagten zu raten?",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_118",
+    "label": "Der Beklagte läuft, wenn er im Termin verhandelt, Gefahr, mit den dort nicht oder nicht substantiiert vorgetragenen Angriffs- und Verteidigungsmitteln nach § 296a ZPO präkludiert zu werden, d. h. er später nicht mehr vorbringen zu können. Er sollte daher die so genannte \"Flucht in die Säumnis\" antreten und nicht zur Sache verhandeln. Verhandelt der Beklagte nicht, ergeht zwar zunächst ein Versäumnisurteil gegen ihn. Gegen dieses kann er aber Einspruch einlegen. Nach ordnungsgemäßem Einspruch gegen das Versäumnisurteil wird der Rechtsstreit in die Lage zurückversetzt, in der er sich vor Eintritt der Säumnis befand (§ 342 ZPO). Sobald der Beklagte die Möglichkeit, seinen Sachvortrag durch A noch rechtzeitig in den Prozess einzubringen (zu den Grenzen näher HK-ZPO/*Kießling* § 340 Rn. 9 f.).",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_119",
+    "label": "Nach einem Einspruch kann sich der Prozess also wie folgt entwickeln:",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_120",
+    "label": "**589**",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_121",
+    "label": "![]( _page_13_Figure_1.jpeg )",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_122",
+    "label": "**Klausurtipp:** Auch der Einspruch gegen ein Versäumnisurteil ist ein beliebtes Klausurthema. Der Prüfungsaufbau ist dem bei Rechtsmitteln vergleichbar (→ Rn. 599), unterscheidet sich aber davon insofern, als man wegen § 342 ZPO nicht die Begründetheit des Einspruchs, sondern die Zulässigkeit und Begründetheit der Klage prüft und damit die inhaltliche Übereinstimmung mit dem Versäumnisurteil:",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_123",
+    "label": "#### **A. Zulässigkeit des Einspruchs**",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_124",
+    "label": "- I. Statthaftigkeit (§ 338 ZPO)",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_125",
+    "label": "- II. Form (§ 340 Abs. 1 ZPO)",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_126",
+    "label": "- III. Frist (§ 339 ZPO)",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_127",
+    "label": "- IV. Prozesshandlungsvoraussetzungen (→ Rn. 281)",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_128",
+    "label": "#### **B. Hauptsacheentscheidung**",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_129",
+    "label": "- I. Zulässigkeit der Klage",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "content_130",
+    "label": "- II. Begründetheit der Klage",
+    "parent_id": "header_111",
+    "type": "content"
+  },
+  {
+    "id": "header_131",
+    "label": "## **2. Zweites Versäumnisurteil: Berufung oder Revision**",
+    "parent_id": "header_109",
+    "type": "header_l2"
+  },
+  {
+    "id": "content_132",
+    "label": "Legt eine Partei gegen ein Versäumnisurteil Einspruch ein, bestimmt das Gericht einen (neuen) Termin zur mündlichen Verhandlung. Ist die Partei in diesem Termin wiederum säumig, ergeht aufgrund der Säumnis ein zweites Versäumnisurteil. Der Einspruchsrichter prüft nur noch das Vorliegen der Säumnis nach Einspruch (str., s. sogleich). Liegt Säumnis vor, wird der Einspruch verworfen. Ein erneuter Einspruch hiergegen ist nicht statthaft (§ 345 ZPO). **590**",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_133",
+    "label": "Gegen dieses zweite Versäumnisurteil lässt § 514 Abs. 2 S. 1 ZPO als Ausnahme zu § 514 Abs. 1 ZPO die Berufung, § 565 S. 1 i.V.m. § 514 Abs. 2 S. 1 ZPO die Revision zu. Denn das zweite Versäumnisurteil ist ein solches, \"gegen das der Einspruchansichnichtstatthaftist\" i.S.v. § 514 Abs. 2 S. 1 ZPO, weil § 345 ZPO den Einspruch ausschließt. Die Berufung kann aber nach § 514 Abs. 2 S. 1 ZPO nur darauf gestützt werden, dass **keine schuldhafte Säumnis** vorgelegen habe. In diesem Fall soll das Urteil korrigierbar sein, weil sonst dem Säumigen das rechtliche Gehörentzogenwürde (MüKoZPO/*Rimmelspacher* § 514 Rn. 1). Der Berufungsrichter überprüft also nur das, was auch der Einspruchsrichter geprüft hat: die schuldhafte Säumnis bei Entscheidung über den Einspruch, sog. **\"Gleichlauf des Prüfungsumfangs\"** (s. BGHNJW-RR2011,1692). In der Revision wird nur geprüft, ob das Berufungsgericht fehlerhaft schuldhafte Säumnis bejaht hat.",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_134",
+    "label": "Keine schuldhafte Säumnis wird zB angenommen, wenn der Anwalt unvorhersehbar in einen Stau gerät und Bescheid gibt, er werde alsbald eintreffen (anschaulich BGHNJW 2007, 2047). Dann trifft die gegnerische Partei im Rahmen des Zumutbaren die Pflicht, auf den Anwalt zu warten.",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_135",
+    "label": "**Beispielsfall**(nach BGHNJW 1998, 3125): Der Kläger verlangt vom Beklagten Zahlung eines Werklohns. Im mündlichen Verhandlungstermin erließ das Gericht gegen den Beklagten ein Versäumnisurteil. Hiergegen legte der Anwalt fristgerecht Einspruch ein. Im neu angesetzten Verhandlungstermin erschien für den Beklagten wiederum niemand, so dass auf Antrag des Klägers ein zweites Versäumnisurteil erging. Der Anwalt des Beklagten legte hiergegen Berufung ein mit der Begründung, die Post sei von einer Auszubildenden unter Aufsicht einer erfahrenen Rechtsanwaltsfachangestellten bearbeitet worden. Beide hätten die Ladung übersehen und den Termin entgegen seiner allgemeinen Weisung nicht im Kalender eingetragen. Ist die Berufung zulässig und begründet? **591**",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_136",
+    "label": "Eine Berufung gegen das zweite Versäumnisurteil ist gem. § 514 Abs. 2 ZPO **zulässig**, wenn die säumige Partei schlüssig vorträgt, dass kein Fall einer schuldhaften Säumnis vorgelegen habe. Für die Zulässigkeit der Berufung ist daher zu prüfen, ob der Vortrag des Beklagten, seine Richtigkeit unterstellt, schuldhafte Säumnis ausschließt. Hier macht der Beklagte geltend, seinen Anwalt, dessen Verschulden ihm nach § 85 Abs. 2 ZPO zugerechnet wird, treffe kein solches. Ein Rechtsanwalt darf die Eintragung eines Termins als einfache Aufgabe seinem zuverlässigen Angestellten übertragen. Es genügt eine allgemeine Weisung des Rechtsanwalts, einen Termin einzutragen. Für das Verschulden seiner Angestellten haftet er nicht; § 278 BGB ist nicht anwendbar. Das Nichtvorliegen schuldhafter Säumnis ist daher schlüssig vorgetragen. Die Berufung ist **begründet**, wenn der Beklagte den vorgetragenen Sachverhalt, aus dem sich das fehlende Verschulden des Anwalts ergibt, auch beweisen kann. Das angefochtene Versäumnisurteil wird dann aufgehoben. IdR wird das Berufungsgericht dann nach § 538 Abs. 2 S. 1 Nr. 6 ZPO den Rechtsstreit zur Entscheidung an die erste Instanz zurückverweisen.",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_137",
+    "label": "Die Literatur will sich in bestimmten Konstellationen nicht damit abfinden, dass das Berufungsgericht nur prüfen darf, ob im Einspruchsverfahren ein Fall schuldhafter Säumnis vorgelegen hat. Vielmehr sollen insbesondere in zwei Konstellationen sowohl der **Einspruchsrichter** als auch das **Berufungsgericht**, letzteres **entgegen** dem klaren Wortlaut des **§ 514 Abs. 2 S. 1 ZPO**, mehr prüfen müssen als nur das Vorliegen der Säumnis beim zweiten Versäumnisurteil: **592**",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_138",
+    "label": "(1) Gegenden. Beklagter ergeht ein erstes Versäumnisurteil, obwohl es nach § 335 ZPO unzulässig war (z. B. wegen fehlerhafter Ladung). Das zweite Versäumnisurteil ergeht, weil der Beklagte säumig ist.",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_139",
+    "label": "(2) Gegen den Beklagten ergeht ein erstes Versäumnisurteil, obwohl die Klage nicht schlüssig ist. Das zweite Versäumnisurteil ergeht, weil der Beklagte säumig ist.",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_140",
+    "label": "Beiden Fällen ist gemeinsam, dass das erste Versäumnisurteil falsch war und dass der Beklagte die Möglichkeit versäumt hat, es nach Einlegung des Einspruchs korrigieren zu lassen. Im Fall (1) hätte er auf den Einspruch hin eine Sachentscheidung erwerken können – obzuseinen Gunsten, hängt von der materiellen Sachlage ab. Im Fall (2) hätte er erreichen können, dass die unschlüssige Klage abgewiesen wird. Hält man an § 514 Abs. 2 ZPO fest, kann der Beklagte nun nichts mehr tun. Denn er kann in der Berufung nur die schuldhafte Säumnis beim zweiten Versäumnisurteil prüfen lassen. Diese Säumnis war aber gegeben.",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_141",
+    "label": "Deshalb wird vorgeschlagen, für den **Fall (1)** die Prüfungskompetenz sowohl des Einspruchsrichters als auch des Berufungsgerichts zu erweitern. Beide sollen auch prüfen, **ob beim ersten Versäumnisurteil Säumnis vorlag und die Säumnisentscheidung nach §§ 337, 335 ZPO unzulässig war** (Zöller/ *Herget* ZPO§345Rn.4 mwN). Der BGH hat jedoch zu Recht anders entschieden (BGHZ 97, 341 (344 ff.)). Zwar sagt § 345 ZPO nicht ganz eindeutig, wie weit der Prüfungsumfang des Einspruchsrichters reicht. Es besteht aber in der Tat ein Anlass, sich über den klaren Wortlaut des § 514 Abs. 2 S. 1 ZPO hinwegzusetzen. Insbesondere überzeugt das Argument der Gegenaufsicht nicht, fälschlich festgestellte Säumnis müsste beim ersten Säumnisurteil ebenso angreifbar sein wie beim zweiten. Bei falsch angenommener Säumnis im ersten Versäumnisurteil steht dem Beklagten ohnehin der Einspruch zu. Vergibt er diese Möglichkeit, ist er nicht schutzbedürftig. **593**",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_142",
+    "label": "#### IX. Kontrollfragen 271",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "content_143",
+    "label": "Auch für den **Fall (2)** wird diskutiert, ob Einspruchsrichter und Berufungsgericht **die Schlüssigkeit der Klage** prüfen müssen (dafür Zöller/*Herget* ZPO §345 Rn. 4 mwN), obwohl §514 Abs. 2 S. 1 ZPO das dafür das Berufungsgericht nicht zulässt und §345 ZPO es für den Einspruchsrichter jedenfalls nicht positiv anordnet. Der BGH hat zu Recht auch diese Erweiterung des Prüfungsumfangs abgelehnt (BGHZ 141, 351; s. auch BGHN JW 2016, 642 (643): keine Prüfung der ordnungsgemäßen Besetzung des Einspruchsgerichts). Er beruft sich auf den Wortlaut des §514 Abs. 2 S. 1 ZPO sowie auf §700 Abs. 6 ZPO (→ Rn. 831 f.), der für das Mahnverfahren ausnahmsweise eine Prüfung der Voraussetzungen eines Versäumnisurteils vorsieht. Die Regelung wäre überflüssig, ergäbe sich der gleiche Prüfungsumfang schon aus §345 ZPO. Der Beklagte ist auch hier nicht schutzwürdig, da er im Einspruchsverfahren, wäre er erschienen, die Prüfung der Schlüssigkeit hätte herbeiführen können.",
+    "parent_id": "header_131",
+    "type": "content"
+  },
+  {
+    "id": "header_144",
+    "label": "## **IX. Kontrollfragen**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_145",
+    "label": "- 1. Welcher Verfahrensgrundsatz kommt in den Regeln über das Versäumnisverfahren zum Ausdruck?",
+    "parent_id": "header_144",
+    "type": "content"
+  },
+  {
+    "id": "content_146",
+    "label": "- 2. Wie lässt es sich rechtfertigen, dass im Falle der Säumnis eine nachteilige Entscheidung zu Lasten der säumigen Partei geht?",
+    "parent_id": "header_144",
+    "type": "content"
+  },
+  {
+    "id": "content_147",
+    "label": "- 3. Welche vier Voraussetzungen müssen für jede Säumnisentscheidung vorliegen?",
+    "parent_id": "header_144",
+    "type": "content"
+  },
+  {
+    "id": "content_148",
+    "label": "- 4. Welche Säumnisentscheidungen können nur bei Zulässigkeit der Klage ergehen?",
+    "parent_id": "header_144",
+    "type": "content"
+  },
+  {
+    "id": "content_149",
+    "label": "- 5. Welchen Tatsachenstoff legt das Gericht seiner Entscheidung zugrunde, wenn der Beklagte säumig ist und der Kläger den Erlass eines Versäumnisurteils beantragt?",
+    "parent_id": "header_144",
+    "type": "content"
+  },
+  {
+    "id": "content_150",
+    "label": "- 6. Wann spricht man von einem \"unechten Versäumnisurteil\"?",
+    "parent_id": "header_144",
+    "type": "content"
+  },
+  {
+    "id": "content_151",
+    "label": "- 7. Kann man gegen ein Versäumnisurteil Berufung einlegen?",
+    "parent_id": "header_144",
+    "type": "content"
+  },
+  {
+    "id": "content_152",
+    "label": "Die Antworten befinden sich am Ende des Buches.",
+    "parent_id": "header_144",
+    "type": "content"
+  },
+  {
+    "id": "header_153",
+    "label": "#### **Empfehlungen zur vertiefenden Lektüre:**",
+    "parent_id": "doc_title",
+    "type": "header_l1"
+  },
+  {
+    "id": "content_154",
+    "label": "*Braun,* Berufung gegen das zweite Versäumnisurteil bei unschlüssiger Klage?, JZ 1999, 1157; *Elser,* Rechtsprechung zur Berufung gegen das technisch zweite Versäumnisurteil, JuS 1994, 965; *M. Huber*, Grundwissen – Zivilprozessrecht: Einspruch des Beklagten gegen Versäumnisurteil und \"technisch zweites\" Versäumnisurteil, JuS 2015, 985; *ders.*, Grundwissen – Zivilprozessrecht: Säumnis des Beklagten, JuS 2013, 18; *Metzing,* Der Einspruch gegen das Versäumnisurteil, JuS 2016, 678; *Schreiber,* Das Versäumnisurteil, Jura 2014, 196; *Siemon,* Aus der Praxis: Doppelsäumnis nach Einspruch gegen Vollstreckungsbescheid, JuS 2008, 605; *Stadler/Jarsumbek,* Das Versäumnisverfahren, §§ 330ff. ZPO, JuS 2006, 34 und 134; *Stoffel/Strauch,* Versäumnisurteil gegen den Beklagten im schriftlichen Verfahren nach Verteidigungsanzeige?, NJW 1997, 2372.",
+    "parent_id": "header_153",
+    "type": "content"
+  }
+]

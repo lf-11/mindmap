@@ -170,7 +170,7 @@ def is_descendant(db: Session, ancestor_id: int, descendant_id: int) -> bool:
         current = db.query(models.Node).filter(models.Node.id == current.parent_id).first()
     return False
 
-def add_node(db: Session, mindmap_id: int, content: str, parent_id: int = None, x_pos: int = 0, y_pos: int = 0) -> models.Node:
+def add_node(db: Session, mindmap_id: int, content: str, parent_id: int = None, x_pos: Optional[int] = None, y_pos: Optional[int] = None) -> models.Node:
     """Add a node to the mindmap"""
     # Verify mindmap exists
     mindmap = db.query(models.MindMap).filter(models.MindMap.id == mindmap_id).first()
@@ -198,3 +198,16 @@ def add_node(db: Session, mindmap_id: int, content: str, parent_id: int = None, 
     db.commit()
     db.refresh(node)
     return node
+
+# Add new function for saving layout
+def save_layout(db: Session, mindmap_id: int, node_positions: List[dict]) -> None:
+    """Save node positions for a mindmap"""
+    for pos in node_positions:
+        node = db.query(models.Node).filter(
+            models.Node.id == pos['id'],
+            models.Node.mindmap_id == mindmap_id
+        ).first()
+        if node:
+            node.x_pos = pos['x']
+            node.y_pos = pos['y']
+    db.commit()

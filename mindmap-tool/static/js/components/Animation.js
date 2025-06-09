@@ -1,116 +1,72 @@
 import * as config from '../config/config.js';
 import { mindMapState } from '../config/state.js';
-import { generateOrthogonalPath } from '../layout/PathGenerator.js';
-import { calculateNewLayout } from '../layout/TreeLayout.js';
 import { createNodeGroup, createConnection } from './Node.js';
+import { generateOrthogonalPath } from '../layout/PathGenerator.js';
 
 /**
  * Animates the addition of a new node and its connection
- * @param {Object} parentNode - Parent node data
- * @param {Object} childNode - Child node data
+ * @param {Object} animationData - Node data including position, type, and parent/source node info
  * @param {Function} handleNodeClick - Click handler function
+ * @param {Map} treeNodesMap - Map of all TreeNode instances by ID (optional, for context)
  */
-export async function addNodeWithAnimation(parentNode, childNode, handleNodeClick) {
-    console.log('Adding node with animation:', {parent: parentNode, child: childNode});
+export async function addNodeWithAnimation(animationData, handleNodeClick, treeNodesMap) {
+    // animationData contains targetNode properties (id, x, y, width, height, label, type, parentId)
+    // and sourceNode (the parent TreeNode object, or null if root)
     
-    childNode.parent_id = parentNode.id;
     const g = mindMapState.getGroup();
+    const targetNode = animationData; // The node to be added and rendered
+    const sourceNode = animationData.sourceNode; // The parent TreeNode object
 
-    const tempId = 'temp_' + Date.now();
-    const newPositions = calculateNewLayout(
-        parentNode.id, 
-        tempId, 
-        g.selectAll('.node').data(),
-        mindMapState.getTreeLayout()
-    );
-
-    // First Phase: Move existing nodes and their connections
-    await moveExistingNodes(newPositions);
-
-    // Second Phase: Add new node and animate its connection
-    await new Promise(resolve => {
-        setTimeout(() => {
-            const newNodePos = newPositions.get(tempId);
-            const parentPos = newPositions.get(parentNode.id);
-            
-            if (!newNodePos || !parentPos) {
-                console.error('Failed to get positions');
-                return;
-            }
-
-            // Create new node
-            createNodeGroup({
-                ...childNode,
-                x: newNodePos.x,
-                y: newNodePos.y
-            }, handleNodeClick);
-
-            // Create and animate the connection
-            const link = createConnection(parentPos, newNodePos, childNode.id);
-            animateConnection(link);
-
-            resolve();
-        }, config.ANIMATION.TRANSITION_DELAY);
-    });
-}
-
-/**
- * Moves existing nodes and their connections to new positions
- * @param {Map} newPositions - Map of node IDs to their new positions
- */
-async function moveExistingNodes(newPositions) {
-    const g = mindMapState.getGroup();
-    const transitions = [];
-
-    g.selectAll('.node').each(function(d) {
-        const newPos = newPositions.get(d.id);
-        if (newPos) {
-            const node = d3.select(this);
-            const nodeTransition = node.transition()
-                .duration(config.ANIMATION.NODE_MOVEMENT)
-                .ease(d3.easeQuadInOut)
-                .attr('transform', `translate(${newPos.x},${newPos.y})`);
-            
-            transitions.push(nodeTransition);
-
-            // Update associated link
-            const link = g.select(`.link[data-target="${d.id}"]`);
-            if (!link.empty()) {
-                const parentPos = newPositions.get(d.parent_id);
-                if (parentPos) {
-                    const newPathData = generateOrthogonalPath(parentPos, newPos);
-                    
-                    const linkTransition = link.transition()
-                        .duration(config.ANIMATION.NODE_MOVEMENT)
-                        .ease(d3.easeQuadInOut)
-                        .attr('d', newPathData.path);
-                    
-                    transitions.push(linkTransition);
-                }
-            }
+    // If it has a parent (sourceNode exists), create and animate the connection first
+    if (sourceNode && targetNode.parentId) {
+        // createConnection handles path generation based on node types and junction points
+        const link = createConnection(sourceNode, targetNode);
+        
+        if (link && !link.empty() && link.attr('d') && link.attr('d') !== "") { 
+            await new Promise(resolve => {
+                animateConnection(link, resolve);
+            });
         }
-    });
+    }
 
-    await Promise.all(transitions);
+    // Create node group at its final position after path animation (if any)
+    // createNodeGroup expects data like id, label, x, y, width, height, type
+    createNodeGroup(targetNode, handleNodeClick);
 }
 
 /**
  * Animates a connection path growing from source to target
  * @param {Object} link - D3 selection of the path element
+ * @param {Function} onComplete - Callback to run when animation completes
  */
-function animateConnection(link) {
+export function animateConnection(link, onComplete) {
     const totalLength = link.node().getTotalLength();
+    if (totalLength === 0) { // No length, complete immediately
+        if (onComplete) onComplete();
+        return;
+    }
+
+    let duration = (totalLength / config.ANIMATION.SPEED_PPS) * 1000; // ms
+
+    // Apply min/max duration constraints if they are defined in config
+    if (config.ANIMATION.MAX_PATH_DURATION) {
+        duration = Math.min(duration, config.ANIMATION.MAX_PATH_DURATION);
+    }
+    if (config.ANIMATION.MIN_PATH_DURATION) {
+        duration = Math.max(duration, config.ANIMATION.MIN_PATH_DURATION);
+    }
 
     link
-        .style('stroke-dasharray', totalLength)
-        .style('stroke-dashoffset', totalLength)
+        .attr('stroke-dasharray', totalLength)
+        .attr('stroke-dashoffset', totalLength)
         .transition()
-        .duration(config.ANIMATION.PATH_GROWTH)
+        .duration(duration) // Use calculated duration
         .ease(d3.easeLinear)
-        .style('stroke-dashoffset', 0)
+        .attr('stroke-dashoffset', 0)
         .on('end', function() {
             d3.select(this)
-                .style('stroke-dasharray', null)
-                .style('stroke-dashoffset', null);
+                .attr('stroke-dasharray', null)
+                .attr('stroke-dashoffset', null);
+            if (onComplete) onComplete();
         });
 } 

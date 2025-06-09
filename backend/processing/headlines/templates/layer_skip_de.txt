@@ -1,0 +1,82 @@
+Du bist Teil eines automatischen Systems, das Text, der aus einem PDF-Dokument extrahiert wurde, korrigieren soll. 
+Bei dem nachfolgenden Stück Text hat das Programm, dass die Überschriftenebenen festlegt, eine Unklarheit gefunden. 
+Grundsätzliche sind die Resultate des Programms vertrauenswürdig, aber wenn bspw. in einer Auflistung oder Prüfungsschema eine ähnliche Nummerierung verwendet wird, wie bei den Überschriften, kann das Programm dies nicht richtig trennen.
+
+WICHTIG: In juristischen Texten gibt es zwei Arten von Nummerierungen:
+1. HAUPTGLIEDERUNG des Dokuments (diese soll erkannt werden)
+2. PRÜFUNGSSCHEMATA/AUFLISTUNGEN (diese sollen IGNORIERT werden)
+
+Prüfungsschemata erkennt man daran, dass sie:
+- Kurze, prägnante Überschriften haben
+- Oft juristische Prüfungspunkte auflisten (z.B. "Zulässigkeit", "Begründetheit")
+- Nicht von langen Textabschnitten gefolgt werden
+- Durch Begriffe wie "Klausurtipp", "Prüfungsaufbau", "Schema" eingeleitet werden
+- In einem anderen Kontext stehen als die Hauptgliederung
+
+Es wurde bislang festgestellt, dass die
+{% for layer_num in layer_range -%}
+{% set layer_info = all_layers[layer_num] -%}
+{% if layer_num == 1 -%}
+die erste Überschriften-Ebene {{ layer_info.name }} ({{ layer_info.numerals }}) sind.
+{% elif layer_num == 2 -%}
+Die zweite Ebene sind {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% elif layer_num == 3 -%}
+Die dritte Ebene sind {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% elif layer_num == 4 -%}
+Die vierte Ebene sind {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% elif layer_num == 5 -%}
+Die fünfte Ebene sind {{ layer_info.name }} ({{ layer_info.numerals }}).
+{% endif -%}
+{% endfor %}
+
+Das Problem liegt an dieser Stelle: Die vorherige Überschrift ist korrekt als Ebene {{ previous_layer }} ({{ previous_layer_numerals }}) identifiziert, aber dann {% if problematic_headers|length == 1 -%}
+folgt eine Überschrift der Ebene {{ current_layer }}: {{ problematic_headers[0].text }}
+{%- else -%}
+folgen Überschriften der Ebene {{ current_layer }}: {{ problematic_headers | map(attribute='text') | join(', ') }}
+{%- endif %}.
+
+{% if expected_layers_info|length > 0 -%}
+{% if expected_layers_info|length == 1 -%}
+{% set expected = expected_layers_info[0] -%}
+Erwartet würde Ebene {{ expected.layer_num }}, {{ expected.layer_name }} ({{ expected.layer_numerals }}).
+{% else -%}
+Erwartet würden die Ebenen {% for exp in expected_layers_info -%}
+{{ exp.layer_num }}, {{ exp.layer_name }} ({{ exp.layer_numerals }});
+{%- if not loop.last %} und {% endif -%}
+{%- endfor %}.
+{% endif -%}
+{% endif %}
+
+WICHTIGER HINWEIS: Wenn die Überschriften nicht zur erwarteten Gliederungsebene passen (z.B. Großbuchstaben statt Kleinbuchstaben), ist dies ein starker Hinweis auf ein Prüfungsschema!
+
+DEINE AUFGABE: Entscheide, ob die fraglichen Überschriften:
+A) Teil der Hauptgliederung sind → dann ordne sie der korrekten Ebene zu
+B) Teil eines Prüfungsschemas sind → dann markiere sie als "NICHT in Hauptgliederung aufnehmen"
+
+Bitte gehe bei deiner Prüfung wie folgt vor:
+
+KONTEXTANALYSE:
+- Steht vor den Überschriften ein Hinweis wie "Klausurtipp", "Prüfungsaufbau", "Schema" oder ähnliches?
+- Folgen den fraglichen Überschriften viel Text (Hinweis auf Überschrift, die für Gliederung relevant ist) oder eher weniger Text / weitere Überschriften (Hinweis dafür, dass dies eine Auflistung oder ein Prüfungsschema ist)?
+- Passen die Überschriften vom Stil her zu juristischen Prüfungspunkten?
+- Unterbricht das Schema den normalen Textfluss?
+
+Im juristischen Bereich wird besonders bei Prüfungsschemata eine Nummerierung vorgenommen. Diese kann dann die Software-Logik, die die Überschriftenebenen identifizieren soll, durcheinander bringen.
+
+Die Überschriften MÜSSEN NICHT in das allgemeine Gliederungsschema aufgenommen werden. Es geht hier nur darum, die WESENTLICHEN Überschriften des Dokuments zu identifizieren, um den zugehörigen Text darunter zu gliedern.
+
+Hier ist der relevante Textabschnitt:
+
+---
+{{ section_text }}
+---
+
+ENTSCHEIDUNG:
+Beziehe den Kontext um die Überschriften in dein Urteil mit ein.
+
+Wähle eine der folgenden Optionen:
+□ HAUPTGLIEDERUNG: Die Überschriften gehören zur Ebene [X] der Hauptgliederung
+□ PRÜFUNGSSCHEMA: Die Überschriften sind Teil eines Schemas und sollen NICHT in die Hauptgliederung aufgenommen werden
+□ UNSICHERHEIT: Hier liegt eine größere Unsicherheit vor, die ein menschliches Urteil erfordert
+
+BEGRÜNDUNG: [Kurze Erklärung basierend auf Kontext, Formatierung und den oben genannten Kriterien]

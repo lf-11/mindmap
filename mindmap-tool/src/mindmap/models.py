@@ -17,8 +17,8 @@ class Node(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     content = Column(Text, nullable=False)
-    x_pos = Column(Integer)  # For frontend positioning
-    y_pos = Column(Integer)  # For frontend positioning
+    x_pos = Column(Integer, nullable=True)  # Optional for saved layouts
+    y_pos = Column(Integer, nullable=True)  # Optional for saved layouts
     mindmap_id = Column(Integer, ForeignKey("mindmaps.id"))
     parent_id = Column(Integer, ForeignKey("nodes.id"), nullable=True)
     

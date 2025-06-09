@@ -7,66 +7,74 @@
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="icon" href="data:,">
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h2>Mindmap Controls</h2>
-            <div class="controls">
-                <input type="text" id="mindmapTitle" placeholder="Mindmap Title">
-                <button onclick="createMindmap(document.getElementById('mindmapTitle').value)">Create Mindmap</button>
-                
-                <input type="text" id="rootContent" placeholder="Root Node Content">
-                <button onclick="createRootNode(document.getElementById('rootContent').value)">Create Root Node</button>
-                
-                <input type="text" id="nodeContent" placeholder="Node Content">
-                <button onclick="addChildNode(document.getElementById('nodeContent').value)">Add Child Node</button>
-                
-                <div class="structure-selector">
-                    <select id="structureSelect">
-                        <option value="">Select a structure...</option>
-                    </select>
-                    <button onclick="buildSelectedStructure()">Build Structure</button>
+        <div class="sidebar expanded">
+            <div class="sidebar-toggle">◀</div>
+            <div class="sidebar-content">
+                <h2>Mindmap Controls</h2>
+                <div class="controls">
+                    <input type="text" id="mindmapTitle" placeholder="Mindmap Title">
+                    <button onclick="createMindmap(document.getElementById('mindmapTitle').value)">Create Mindmap</button>
+                    
+                    <input type="text" id="rootContent" placeholder="Root Node Content">
+                    <button onclick="createRootNode(document.getElementById('rootContent').value)">Create Root Node</button>
+                    
+                    <input type="text" id="nodeContent" placeholder="Node Content">
+                    <button onclick="addChildNode(document.getElementById('nodeContent').value)">Add Child Node</button>
+                    
+                    <button onclick="buildSelectedStructure()">Build Example Structure</button>
+                    
+                    <div id="currentMindmap">Current Mindmap: None</div>
+                    <div id="selectedNode">Selected Node: None</div>
                 </div>
-                
-                <div id="currentMindmap">Current Mindmap: None</div>
-                <div id="selectedNode">Selected Node: None</div>
-            </div>
 
-            <!-- Add the color customization section -->
-            <div class="color-customization">
-                <h3>Customize Colors</h3>
-                
-                <div class="color-picker-group">
-                    <label>Background Color:
-                        <input type="color" id="bgColor" value="#0A0A0A">
-                    </label>
+                <!-- Add the color customization section -->
+                <div class="color-customization">
+                    <h3>Customize Colors</h3>
                     
-                    <label>Grid Dot Color:
-                        <input type="color" id="dotColor" value="#FFFFFF">
-                    </label>
-                    <input type="range" id="dotOpacity" min="0" max="100" value="15">
-                    
-                    <label>Connection Path Color:
-                        <input type="color" id="pathColor" value="#CCCCCC">
-                    </label>
-                    <input type="range" id="pathOpacity" min="0" max="100" value="15">
-                    
-                    <label>Node Fill Color:
-                        <input type="color" id="nodeFillColor" value="#2C2C2C">
-                    </label>
-                    
-                    <label>Node Border Color:
-                        <input type="color" id="nodeBorderColor" value="#3C3C3C">
-                    </label>
-                    
-                    <label>Text Color:
-                        <input type="color" id="textColor" value="#FFFFFF">
-                    </label>
+                    <div class="color-picker-group">
+                        <label>Background Color:
+                            <input type="color" id="bgColor" value="#FFFFFF">
+                        </label>
+                        
+                        <label>Grid Dot Color:
+                            <input type="color" id="dotColor" value="#FFFFFF">
+                        </label>
+                        <input type="range" id="dotOpacity" min="0" max="100" value="100">
+                        
+                        <label>Connection Path Color:
+                            <input type="color" id="pathColor" value="#000000">
+                        </label>
+                        <input type="range" id="pathOpacity" min="0" max="100" value="100">
+                        
+                        <label>Node Fill Color:
+                            <input type="color" id="nodeFillColor" value="#2C2C2C">
+                        </label>
+                        
+                        <label>Node Border Color:
+                            <input type="color" id="nodeBorderColor" value="#3C3C3C">
+                        </label>
+                        
+                        <label>Text Color:
+                            <input type="color" id="textColor" value="#FFFFFF">
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="mindmap" class="mindmap-container"></div>
+        <div id="mindmap" class="mindmap-container">
+            <!-- Navigation buttons positioned over the mindmap -->
+            <div class="navigation-controls">
+                <div class="nav-status-display">
+                    <button id="prev-header-btn" title="Previous Header (Alt + ↑)">▲</button>
+                    <span id="nav-level-display" title="Change Level (Alt + ←/→)">All Levels</span>
+                </div>
+                <button id="next-header-btn" title="Next Header (Alt + ↓)">▼</button>
+            </div>
+        </div>
     </div>
     <script type="module" src="/static/js/mindmap.js"></script>
 </body>

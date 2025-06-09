@@ -1,0 +1,402 @@
+{
+    "table_of_contents": [
+        {
+            "title": "Zur 10. Auflage des Gebhardt",
+            "page": 9
+        },
+        {
+            "title": "Vorwort zu diesem Band",
+            "page": 16
+        },
+        {
+            "title": "Verzeichnis der Abkürzungen",
+            "page": 17
+        },
+        {
+            "title": "Allgemeine Quellen und Literatur zu den Bänden 1-8",
+            "page": 23
+        },
+        {
+            "title": "Abschnitt VIII: Die Zeit der Entwürfe 1273-1347 (Michael Menzel)",
+            "page": 3
+        },
+        {
+            "title": "Quellen und Literatur",
+            "page": 3
+        },
+        {
+            "title": "A. Einleitung",
+            "page": 10,
+            "children": [
+                {
+                    "title": "§ 1 Einführung, Quellen, Forschung",
+                    "page": 10,
+                    "children": [
+                        {
+                            "title": "Zeitpanorama",
+                            "page": 10
+                        },
+                        {
+                            "title": "Quellenüberlieferung",
+                            "page": 14
+                        },
+                        {
+                            "title": "Neuere Forschungsschwerpunkte",
+                            "page": 26
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "B. Landschaften und Herrschaften",
+            "page": 32,
+            "children": [
+                {
+                    "title": "§ 2 Regionen, Städte, Kolonisation",
+                    "page": 32,
+                    "children": [
+                        {
+                            "title": "Wirtschaftslandschaften",
+                            "page": 32
+                        },
+                        {
+                            "title": "Urbane Landschaften",
+                            "page": 37
+                        },
+                        {
+                            "title": "Binnen-, Ostkolonisation",
+                            "page": 46
+                        }
+                    ]
+                },
+                {
+                    "title": "§ 3 Anfänge der fürstlichen Territorien",
+                    "page": 50,
+                    "children": [
+                        {
+                            "title": "Hochstifte",
+                            "page": 53
+                        },
+                        {
+                            "title": "Weltliche Herrschaften",
+                            "page": 62
+                        },
+                        {
+                            "title": "Deutschordensstaat",
+                            "page": 73
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "C. Königstum und Fürstenmacht",
+            "page": 80,
+            "children": [
+                {
+                    "title": "§ 4 Rudolf I. (1273–1291)",
+                    "page": 80,
+                    "children": [
+                        {
+                            "title": "a) Wahl, Heiratspolitik, Revindikationen",
+                            "page": 80
+                        },
+                        {
+                            "title": "b) Kampf gegen Ottokar II. von Böhmen",
+                            "page": 94
+                        },
+                        {
+                            "title": "c) Hausmacht im Südosten",
+                            "page": 98
+                        },
+                        {
+                            "title": "d) Scheitern der Kaiserkrönung, Nachfolge",
+                            "page": 102
+                        }
+                    ]
+                },
+                {
+                    "title": "§ 5 Adolf von Nassau (1292–1298)",
+                    "page": 110,
+                    "children": [
+                        {
+                            "title": "a) Habsburg, Konrad von Teck, Wahl",
+                            "page": 110
+                        },
+                        {
+                            "title": "b) Haus-, Reichsmacht",
+                            "page": 113
+                        },
+                        {
+                            "title": "c) Fürstenopposition, Sturz",
+                            "page": 117
+                        }
+                    ]
+                },
+                {
+                    "title": "§ 6 Albrecht I. (1298–1308)",
+                    "page": 121,
+                    "children": [
+                        {
+                            "title": "a) Nachwahl, Nürnberger Hoftag, Frankreich",
+                            "page": 121
+                        },
+                        {
+                            "title": "b) Sieg über Fürsten, Scheitern der Kaiserkrönung",
+                            "page": 127
+                        },
+                        {
+                            "title": "c) Kampf gegen Wenzel II. von Böhmen",
+                            "page": 130
+                        },
+                        {
+                            "title": "d) Griff nach der Kurstimme, gewaltsamer Tod",
+                            "page": 134
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "D. Kaisertum und Fürstenreich",
+            "page": 138,
+            "children": [
+                {
+                    "title": "§ 7 Heinrich VII. (1308–1313)",
+                    "page": 138,
+                    "children": [
+                        {
+                            "title": "a) Französische Kandidatur, Neubeginn",
+                            "page": 138
+                        },
+                        {
+                            "title": "b) Habsburg, Thüringen/Meißen, Böhmen",
+                            "page": 142
+                        },
+                        {
+                            "title": "c) Italienzug, Kaiserkrönung, Robert von Neapel",
+                            "page": 145
+                        }
+                    ]
+                },
+                {
+                    "title": "§ 8 Ludwig IV. (1314–1347), Friedrich der Schöne (1314–1330)",
+                    "page": 153,
+                    "children": [
+                        {
+                            "title": "a) Kandidatensuche, Doppelwahl",
+                            "page": 153
+                        },
+                        {
+                            "title": "b) Thronstreit, Schlacht von Mühldorf, Brandenburg",
+                            "page": 159
+                        },
+                        {
+                            "title": "c) Konflikt mit der Kirche, Doppelkönigtum, Romzug",
+                            "page": 164
+                        },
+                        {
+                            "title": "d) Staatstheorie, Kaiserkrönung",
+                            "page": 170
+                        },
+                        {
+                            "title": "e) Verfassungsentwicklung",
+                            "page": 176
+                        },
+                        {
+                            "title": "f) Bündnisse mit England und Frankreich",
+                            "page": 183
+                        },
+                        {
+                            "title": "g) Hausmacht",
+                            "page": 185
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "E. Kirche und religiöses Erleben",
+            "page": 7,
+            "children": [
+                {
+                    "title": "§ 9 Kirchliche Hierarchie",
+                    "page": 191,
+                    "children": [
+                        {
+                            "title": "a) Papsttum, Kurie",
+                            "page": 191
+                        },
+                        {
+                            "title": "b) Bistümer, Pfarreien",
+                            "page": 196
+                        }
+                    ]
+                },
+                {
+                    "title": "§ 10 Ordensspiritualität",
+                    "page": 201,
+                    "children": [
+                        {
+                            "title": "a) Mystik",
+                            "page": 201
+                        },
+                        {
+                            "title": "b) Armutsstreit",
+                            "page": 206
+                        }
+                    ]
+                },
+                {
+                    "title": "§ 11 Laikale Gemeinschaften",
+                    "page": 208,
+                    "children": [
+                        {
+                            "title": "a) Beginen, Begarden",
+                            "page": 208
+                        },
+                        {
+                            "title": "b) Dritter Orden",
+                            "page": 212
+                        }
+                    ]
+                },
+                {
+                    "title": "§ 12 Gelebte Frömmigkeit",
+                    "page": 214,
+                    "children": [
+                        {
+                            "title": "a) Stiftungen",
+                            "page": 214
+                        },
+                        {
+                            "title": "b) Wallfahrten",
+                            "page": 217
+                        },
+                        {
+                            "title": "c) Flagellanten",
+                            "page": 220
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "F. Geist und Kunst",
+            "page": 222,
+            "children": [
+                {
+                    "title": "§ 13 Wissenschaft",
+                    "page": 222,
+                    "children": [
+                        {
+                            "title": "a) Studienorte",
+                            "page": 223
+                        },
+                        {
+                            "title": "b) Theologie, Philosophie",
+                            "page": 227
+                        },
+                        {
+                            "title": "c) Jurisprudenz",
+                            "page": 233
+                        },
+                        {
+                            "title": "d) Medizin",
+                            "page": 238
+                        },
+                        {
+                            "title": "e) Karrieren",
+                            "page": 243
+                        }
+                    ]
+                },
+                {
+                    "title": "§ 14 Schulen",
+                    "page": 246
+                },
+                {
+                    "title": "§ 15 Schöne Kunst",
+                    "page": 249,
+                    "children": [
+                        {
+                            "title": "a) Literatur",
+                            "page": 249
+                        },
+                        {
+                            "title": "b) Theater",
+                            "page": 259
+                        },
+                        {
+                            "title": "c) Musik",
+                            "page": 261
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "VIII. Inhalt",
+            "page": 264,
+            "children": [
+                {
+                    "title": "§ 16 Bildende Kunst",
+                    "page": 264,
+                    "children": [
+                        {
+                            "title": "a) Architektur",
+                            "page": 264
+                        },
+                        {
+                            "title": "b) Skulptur",
+                            "page": 273
+                        },
+                        {
+                            "title": "c) Malerei",
+                            "page": 277
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "G. Bilanz",
+            "page": 284,
+            "children": [
+                {
+                    "title": "§ 17 Zusammenfassung, Ausblick",
+                    "page": 284
+                }
+            ]
+        },
+        {
+            "title": "Anhang",
+            "page": 290,
+            "children": [
+                {
+                    "title": "Stammtafeln, Listen",
+                    "page": 290,
+                    "children": [
+                        {
+                            "title": "a) Stammtafeln",
+                            "page": 290
+                        },
+                        {
+                            "title": "b) Amtszeiten",
+                            "page": 302
+                        }
+                    ]
+                },
+                {
+                    "title": "Orts- und Sachregister",
+                    "page": 307
+                },
+                {
+                    "title": "Personenregister",
+                    "page": 321
+                }
+            ]
+        }
+    ]
+}
